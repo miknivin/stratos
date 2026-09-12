@@ -22,7 +22,7 @@ export function BrandsRow() {
                   alt={pass === 0 ? brand.name : ""}
                   width={brand.width}
                   height={brand.height}
-                  className="h-9 w-auto shrink-0 object-contain grayscale opacity-60 transition-all duration-200 hover:grayscale-0 hover:opacity-100 sm:h-11"
+                  className="h-9 w-auto shrink-0 object-contain grayscale opacity-60 transition-all duration-200 hover:scale-110 hover:grayscale-0 hover:opacity-100 sm:h-11"
                 />
               ))}
             </div>

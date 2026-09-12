@@ -22,7 +22,7 @@ export function CTABand({
     <section className="relative overflow-hidden bg-navy-900 py-20 sm:py-24">
       <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden />
       <div
-        className="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-brand-600/25 blur-[110px]"
+        className="animate-float-b absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-brand-600/25 blur-[110px]"
         aria-hidden
       />
       <Image

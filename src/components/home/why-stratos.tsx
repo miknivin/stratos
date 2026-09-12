@@ -71,7 +71,7 @@ function NetworkPattern() {
         const duration = 3.6 + (i % 4) * 0.7;
         const begin = -(i * 0.65).toFixed(2);
         return (
-          <g key={i} className="why-network-spark">
+          <g key={i} className="motion-spark">
             <circle r={6} fill="url(#why-spark-glow)" filter="url(#why-spark-blur)">
               <animateMotion
                 dur={`${duration}s`}
@@ -102,7 +102,7 @@ function NetworkPattern() {
             cy={node.y}
             r={node.r * 2.2}
             fill="url(#why-spark-glow)"
-            className="why-network-spark animate-pulse-node origin-center transform-fill"
+            className="motion-spark animate-pulse-node origin-center transform-fill"
             style={{ animationDelay: `${i * -0.5}s` }}
           />
         </g>

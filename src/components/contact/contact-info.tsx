@@ -43,9 +43,9 @@ export function ContactInfo() {
               href={item.href}
               target={item.icon === MapPin ? "_blank" : undefined}
               rel={item.icon === MapPin ? "noopener noreferrer" : undefined}
-              className="group flex items-start gap-4 rounded-2xl border border-ink-900/8 bg-white p-5 transition-colors hover:border-brand-500/25"
+              className="group flex items-start gap-4 rounded-2xl border border-ink-900/8 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/25 hover:shadow-lg hover:shadow-ink-900/5"
             >
-              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-white">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-white transition-transform duration-300 group-hover:scale-110">
                 <item.icon className="h-5 w-5" strokeWidth={1.75} />
               </span>
               <span>

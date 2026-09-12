@@ -65,6 +65,10 @@
   --animate-float-a: float-a 11s ease-in-out infinite;
   --animate-float-b: float-b 13s ease-in-out infinite;
   --animate-pulse-node: pulse-node 3.4s ease-in-out infinite;
+  --animate-orbit: orbit-rotate 16s linear infinite;
+  --animate-orbit-reverse: orbit-rotate-reverse 22s linear infinite;
+  --animate-orbit-slow: orbit-rotate 28s linear infinite;
+  --animate-ring-pulse: ring-pulse 4.2s ease-in-out infinite;
 
   @keyframes fade-up {
     from {
@@ -117,6 +121,36 @@
       transform: scale(1.4);
     }
   }
+
+  @keyframes orbit-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes orbit-rotate-reverse {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes ring-pulse {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.15;
+      transform: scale(1.06);
+    }
+  }
 }
 
 html {
@@ -134,6 +168,17 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  background-size: 200% auto;
+  animation: gradient-pan 7s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-pan {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 .bg-gradient-brand {
@@ -168,7 +213,7 @@ body {
   .animate-marquee {
     animation: none !important;
   }
-  .why-network-spark {
+  .motion-spark {
     /* SMIL animateMotion isn't covered by the CSS animation-duration override above */
     display: none;
   }

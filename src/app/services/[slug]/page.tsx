@@ -67,7 +67,7 @@ export default async function ServiceDetailPage(
         />
         <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden />
         <div
-          className="absolute -top-24 right-[10%] h-80 w-80 rounded-full bg-brand-600/20 blur-[110px]"
+          className="animate-float-a absolute -top-24 right-[10%] h-80 w-80 rounded-full bg-brand-600/20 blur-[110px]"
           aria-hidden
         />
         <Container className="relative max-w-3xl">

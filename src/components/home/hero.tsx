@@ -10,11 +10,11 @@ export function Hero() {
     <section className="relative overflow-hidden bg-navy-900">
       <div className="absolute inset-0 bg-grid-pattern opacity-40" aria-hidden />
       <div
-        className="absolute -top-32 right-[-10%] h-[32rem] w-[32rem] rounded-full bg-brand-600/25 blur-[120px]"
+        className="animate-float-a absolute -top-32 right-[-10%] h-128 w-lg rounded-full bg-brand-600/25 blur-[120px]"
         aria-hidden
       />
       <div
-        className="absolute bottom-[-14rem] left-[-8%] h-[26rem] w-[26rem] rounded-full bg-navy-600/40 blur-[110px]"
+        className="animate-float-b absolute -bottom-56 left-[-8%] h-104 w-104 rounded-full bg-navy-600/40 blur-[110px]"
         aria-hidden
       />
 

@@ -10,7 +10,7 @@ export function ServiceCard({ service }: { service: Service }) {
       href={`/services/${service.slug}`}
       className="group flex h-full flex-col rounded-2xl border border-ink-900/8 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-brand-500/25 hover:shadow-lg hover:shadow-brand-700/10"
     >
-      <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-brand text-white">
+      <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-brand text-white transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-5 w-5" strokeWidth={2} />
       </span>
 

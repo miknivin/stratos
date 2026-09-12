@@ -7,9 +7,11 @@ export function StatsBand() {
     <section className="relative overflow-hidden bg-navy-900 py-20">
       <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden />
       <div
-        className="absolute top-1/2 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-700/15 blur-[130px]"
+        className="absolute top-1/2 left-1/2 h-120 w-120 -translate-x-1/2 -translate-y-1/2"
         aria-hidden
-      />
+      >
+        <div className="animate-float-a h-full w-full rounded-full bg-brand-700/15 blur-[130px]" />
+      </div>
       <Container className="relative">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {stats.map((stat, index) => (
