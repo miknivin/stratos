@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/section-heading";
+import { HeroSwiper } from "@/components/home/hero-swiper";
 
 export function Hero() {
   return (
@@ -60,17 +61,7 @@ export function Hero() {
         </div>
 
         <div className="relative mt-16 hidden shrink-0 lg:mt-0 lg:block">
-          <div className="relative h-120 w-92 overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-navy-950/50">
-            <Image
-              src="/images/hero-visual.jpg"
-              alt="Stratos Info Tech cybersecurity operations"
-              fill
-              priority
-              sizes="(min-width: 1024px) 23rem, 0px"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-navy-950/70 via-transparent to-transparent" />
-          </div>
+          <HeroSwiper />
           <div
             className="absolute -bottom-6 -left-6 h-32 w-32 rounded-2xl bg-gradient-brand opacity-90 blur-2xl"
             aria-hidden

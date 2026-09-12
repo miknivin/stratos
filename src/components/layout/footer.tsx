@@ -18,7 +18,7 @@ export function Footer() {
               alt={siteConfig.name}
               width={960}
               height={262}
-              className="h-8 w-auto"
+              className="h-8 w-auto self-start"
             />
             <p className="max-w-xs text-sm leading-relaxed text-white/55">
               {siteConfig.description}

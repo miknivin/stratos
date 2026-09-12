@@ -11,7 +11,7 @@ export function BrandsRow() {
         </p>
       </Container>
 
-      <div className="relative mt-8 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div className="relative mt-8 overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="animate-marquee flex w-max items-center gap-16">
           {[0, 1].map((pass) => (
             <div key={pass} className="flex shrink-0 items-center gap-16" aria-hidden={pass === 1}>
