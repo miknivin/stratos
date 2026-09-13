@@ -6,15 +6,15 @@ import { Package } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 const CIRCUIT_TRACES = [
-  { d: "M 300 40 H 170 V 95 H 78", duration: 4.2 },
-  { d: "M 300 120 H 210 V 161 H 78", duration: 5.1 },
+  { d: "M 260 18 H 140 V 52 H 42", duration: 4.2 },
+  { d: "M 260 88 H 190 V 52 H 42", duration: 5.1 },
 ];
 
 const CIRCUIT_PADS = [
-  { x: 300, y: 40 },
-  { x: 170, y: 95 },
-  { x: 300, y: 120 },
-  { x: 210, y: 161 },
+  { x: 260, y: 18 },
+  { x: 140, y: 52 },
+  { x: 260, y: 88 },
+  { x: 190, y: 52 },
 ];
 
 function CircuitDecoration({
@@ -29,18 +29,26 @@ function CircuitDecoration({
 
   return (
     <svg
-      viewBox="0 0 300 220"
+      viewBox="0 0 260 110"
       className={cn(
-        "pointer-events-none absolute h-56 w-72",
-        mirror ? "top-0 left-0 -scale-x-100" : "right-0 bottom-0",
+        "pointer-events-none absolute bottom-0 h-24 w-56",
+        mirror ? "left-0 -scale-x-100" : "right-0",
       )}
       aria-hidden
     >
       <defs>
         <radialGradient id={glowId} cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
-          <stop offset="35%" stopColor="var(--color-brand-300)" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="var(--color-brand-600)" stopOpacity="0" />
+          <stop
+            offset="35%"
+            stopColor="var(--color-brand-300)"
+            stopOpacity="0.85"
+          />
+          <stop
+            offset="100%"
+            stopColor="var(--color-brand-600)"
+            stopOpacity="0"
+          />
         </radialGradient>
         <filter id={blurId} x="-150%" y="-150%" width="400%" height="400%">
           <feGaussianBlur stdDeviation="2.2" />
@@ -48,11 +56,11 @@ function CircuitDecoration({
       </defs>
 
       <rect
-        x={38}
-        y={146}
-        width={30}
-        height={30}
-        rx={4}
+        x={18}
+        y={40}
+        width={24}
+        height={24}
+        rx={3}
         fill="none"
         stroke="var(--color-navy-700)"
         strokeOpacity={0.35}
@@ -118,6 +126,7 @@ export function ProductsGrid() {
       <Container className="relative">
         <SectionHeading
           eyebrow="Wholesale distribution"
+    
           title="Technology products, sourced from trusted manufacturers"
           description="Alongside our services, Stratos is a premier wholesale supplier of technical products and equipment, collaborating with leading vendors to offer reliable, high-performance hardware."
         />

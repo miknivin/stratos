@@ -111,6 +111,76 @@ function NetworkPattern() {
   );
 }
 
+// Diagonals that run just past the 400x300 viewBox edges, so each comet
+// spends most of its short loop actually crossing the visible card.
+const SHOOTING_STARS = [
+  { d: "M -20 300 L 420 -40", duration: 4.2, delay: 0 },
+  { d: "M 420 230 L -40 -30", duration: 5, delay: -1.8 },
+  { d: "M -20 50 L 420 260", duration: 4.6, delay: -3 },
+];
+
+function ShootingStars() {
+  return (
+    <svg
+      viewBox="0 0 400 300"
+      preserveAspectRatio="xMidYMid slice"
+      className="pointer-events-none absolute inset-0 h-full w-full opacity-90"
+      aria-hidden
+    >
+      <defs>
+        <radialGradient id="shoot-head-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="var(--color-brand-700)" stopOpacity="1" />
+          <stop offset="45%" stopColor="var(--color-brand-500)" stopOpacity="0.95" />
+          <stop offset="100%" stopColor="var(--color-brand-600)" stopOpacity="0" />
+        </radialGradient>
+        <filter id="shoot-blur" x="-150%" y="-150%" width="400%" height="400%">
+          <feGaussianBlur stdDeviation="1.4" />
+        </filter>
+        <linearGradient id="shoot-trail" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="var(--color-brand-600)" stopOpacity="0" />
+          <stop offset="100%" stopColor="var(--color-brand-700)" stopOpacity="1" />
+        </linearGradient>
+      </defs>
+
+      {SHOOTING_STARS.map((star, i) => (
+        <path key={i} id={`shoot-path-${i}`} d={star.d} fill="none" stroke="none" />
+      ))}
+
+      {SHOOTING_STARS.map((star, i) => (
+        <g key={i} className="motion-spark">
+          <line
+            x1={-40}
+            y1={0}
+            x2={0}
+            y2={0}
+            stroke="url(#shoot-trail)"
+            strokeWidth={3}
+            strokeLinecap="round"
+          >
+            <animateMotion
+              dur={`${star.duration}s`}
+              begin={`${star.delay}s`}
+              repeatCount="indefinite"
+              rotate="auto"
+            >
+              <mpath href={`#shoot-path-${i}`} />
+            </animateMotion>
+          </line>
+          <circle r={4} fill="url(#shoot-head-glow)" filter="url(#shoot-blur)">
+            <animateMotion
+              dur={`${star.duration}s`}
+              begin={`${star.delay}s`}
+              repeatCount="indefinite"
+            >
+              <mpath href={`#shoot-path-${i}`} />
+            </animateMotion>
+          </circle>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 export function WhyStratos() {
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-28">
@@ -149,6 +219,7 @@ export function WhyStratos() {
               <div className="pointer-events-none absolute inset-0 opacity-25 transition-opacity duration-500 group-hover:opacity-45">
                 <NetworkPattern />
               </div>
+              <ShootingStars />
 
               <ul className="relative grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {values.map((value) => (

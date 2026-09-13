@@ -31,7 +31,7 @@ export function HeroSwiper() {
 
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(id);
   }, [paused]);
 

@@ -14,13 +14,13 @@ function OrbitRings() {
       <div className="absolute inset-30 rounded-full border border-navy-700/25" />
 
       <div className="animate-orbit absolute inset-0">
-        <span className="absolute top-0 left-1/2 h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-gradient-brand shadow-[0_0_18px_4px_rgba(232,68,95,0.55)]" />
+        <span className="absolute top-0 left-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-brand shadow-[0_0_18px_4px_rgba(232,68,95,0.55)]" />
       </div>
       <div className="animate-orbit-reverse absolute inset-15">
-        <span className="absolute top-0 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-brand-500 shadow-[0_0_12px_3px_rgba(232,68,95,0.4)]" />
+        <span className="absolute top-0 left-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500 shadow-[0_0_12px_3px_rgba(232,68,95,0.4)]" />
       </div>
       <div className="animate-orbit-slow absolute inset-30">
-        <span className="absolute top-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-navy-700" />
+        <span className="absolute top-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-navy-700" />
       </div>
     </div>
   );
