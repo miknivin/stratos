@@ -24,7 +24,7 @@ export function Hero() {
         width={600}
         height={585}
         aria-hidden
-        className="pointer-events-none absolute top-1/2 right-[-6%] h-[34rem] w-auto -translate-y-1/2 opacity-[0.07] mix-blend-screen sm:right-[-2%] lg:right-[4%]"
+        className="pointer-events-none absolute top-1/2 right-[-6%] h-136 w-auto -translate-y-1/2 opacity-[0.07] mix-blend-screen sm:right-[-2%] lg:right-[4%]"
       />
 
       <Container className="relative py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:gap-16 lg:py-36">
@@ -60,7 +60,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mt-16 hidden shrink-0 lg:mt-0 lg:block">
+        <div className="relative mt-12 shrink-0 lg:mt-0">
           <HeroSwiper />
           <div
             className="absolute -bottom-6 -left-6 h-32 w-32 rounded-2xl bg-gradient-brand opacity-90 blur-2xl"

@@ -37,7 +37,7 @@ export function HeroSwiper() {
 
   return (
     <div
-      className="relative h-120 w-92 overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-navy-950/50"
+      className="relative mx-auto aspect-920/1120 w-full max-w-92 overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-navy-950/50 lg:mx-0 lg:h-120 lg:w-92 lg:aspect-auto"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -48,7 +48,7 @@ export function HeroSwiper() {
           alt={slide.alt}
           fill
           priority
-          sizes="(min-width: 1024px) 23rem, 0px"
+          sizes="(min-width: 1024px) 23rem, 90vw"
           className={cn(
             "object-cover transition-opacity duration-700 ease-out",
             i === index ? "opacity-100" : "opacity-0",
