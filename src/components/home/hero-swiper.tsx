@@ -56,7 +56,7 @@ export function HeroSwiper() {
           priority={i === 0}
           sizes="100vw"
           className={cn(
-            "object-cover transition-opacity duration-1000 ease-out",
+            "object-cover transition-opacity duration-700 ease-in-out",
             i === index ? "opacity-100" : "opacity-0",
           )}
         />
@@ -74,15 +74,15 @@ export function HeroSwiper() {
       <div className="absolute inset-0 bg-grid-pattern opacity-20 mix-blend-overlay" aria-hidden />
 
       <Container className="relative flex min-h-155 flex-col justify-center py-24 sm:min-h-170 sm:py-28 lg:min-h-190 lg:py-32">
-        <div className="min-h-72 max-w-2xl sm:min-h-64">
+        <div className="relative min-h-125 max-w-2xl sm:min-h-90 lg:min-h-115">
           {heroSlides.map((s, i) => (
             <div
               key={s.headline}
               className={cn(
-                "transition-opacity duration-500",
+                "absolute inset-0 transition-all duration-700 ease-in-out",
                 i === index
-                  ? "relative opacity-100"
-                  : "pointer-events-none absolute inset-0 opacity-0",
+                  ? "opacity-100"
+                  : "pointer-events-none translate-y-2 opacity-0",
               )}
               aria-hidden={i !== index}
             >
