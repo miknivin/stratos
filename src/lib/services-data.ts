@@ -23,6 +23,57 @@ import {
   Compass,
   Wrench,
   Headset,
+  HardDrive,
+  Boxes,
+  Laptop,
+  Route,
+  Wifi,
+  Lock,
+  Gauge,
+  FileSearch,
+  UploadCloud,
+  ServerCog,
+  Activity,
+  PieChart,
+  LifeBuoy,
+  ClipboardList,
+  GitBranch,
+  ClipboardCheck,
+  AlertTriangle,
+  Target,
+  MonitorSmartphone,
+  Radar,
+  FileCheck,
+  Eye,
+  Fingerprint,
+  MailWarning,
+  Siren,
+  ListChecks,
+  Repeat,
+  LineChart,
+  Scan,
+  MessageSquare,
+  Bot,
+  Sparkles,
+  Combine,
+  FileBarChart,
+  Antenna,
+  Tablet,
+  Users2,
+  LayoutDashboard,
+  Link2,
+  FileText,
+  Send,
+  Projector,
+  Camera,
+  Video,
+  ParkingCircle,
+  SlidersHorizontal,
+  PhoneCall,
+  Lightbulb,
+  DoorOpen,
+  RefreshCw,
+  Recycle,
   type LucideIcon,
 } from "lucide-react";
 
@@ -30,6 +81,8 @@ export type ScopeItem = {
   id: string;
   title: string;
   description: string;
+  /** Used by the illustrated scope cards and derived hero illustrations. */
+  icon: LucideIcon;
 };
 
 export type ServicePage = {
@@ -111,18 +164,21 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Servers, Backup and Storage",
             description:
               "Support business workloads with suitable compute, protected storage and recovery planning.",
+            icon: HardDrive,
           },
           {
             id: "enterprise-software",
             title: "Enterprise Software (ERP, ITSM, ITAM)",
             description:
               "Connect business processes, service workflows and asset records through appropriately selected systems.",
+            icon: Boxes,
           },
           {
             id: "end-user-devices",
             title: "End-User Devices",
             description:
               "Source and configure laptops, desktops, hard drives and printers for workplace requirements.",
+            icon: Laptop,
           },
         ],
         icon: Server,
@@ -143,22 +199,26 @@ export const serviceCategories: ServiceCategory[] = [
             id: "lan-wan",
             title: "LAN and WAN",
             description: "Connect office and multi-location systems.",
+            icon: Route,
           },
           {
             id: "wifi",
             title: "Wireless Networking",
             description: "Plan coverage and capacity for productive access.",
+            icon: Wifi,
           },
           {
             id: "vpn",
             title: "VPN and Remote Connectivity",
             description: "Enable controlled access to business resources.",
+            icon: Lock,
           },
           {
             id: "optimisation",
             title: "Network Optimisation",
             description:
               "Review performance and address connectivity bottlenecks.",
+            icon: Gauge,
           },
         ],
         icon: Network,
@@ -198,33 +258,39 @@ export const serviceCategories: ServiceCategory[] = [
             id: "assessment",
             title: "Cloud Assessment and Planning",
             description: "Review workloads and define the target environment.",
+            icon: FileSearch,
           },
           {
             id: "migration",
             title: "Migration and Deployment",
             description: "Plan and implement the move in agreed stages.",
+            icon: UploadCloud,
           },
           {
             id: "operations",
             title: "Infrastructure Operations",
             description: "Coordinate ongoing cloud administration.",
+            icon: ServerCog,
           },
           {
             id: "monitoring",
             title: "Cloud Monitoring",
             description:
               "Track service health within the agreed support scope.",
+            icon: Activity,
           },
           {
             id: "cost",
             title: "Cost Optimisation",
             description: "Review usage and resource allocation.",
+            icon: PieChart,
           },
           {
             id: "support",
             title: "Cloud Support",
             description:
               "Arrange technical assistance under the selected agreement.",
+            icon: LifeBuoy,
           },
         ],
         icon: Cloud,
@@ -245,23 +311,27 @@ export const serviceCategories: ServiceCategory[] = [
             id: "consulting",
             title: "AWS Consulting and Workloads",
             description: "Define requirements and a suitable deployment plan.",
+            icon: ClipboardList,
           },
           {
             id: "vmware",
             title: "VMware Workload Migration to AWS",
             description:
               "Assess supported migration pathways and current platform availability before recommending a deployment.",
+            icon: GitBranch,
           },
           {
             id: "migration",
             title: "AWS Migration",
             description: "Move agreed workloads with a defined transition plan.",
+            icon: UploadCloud,
           },
           {
             id: "application-security",
             title: "AWS Application Security",
             description:
               "Configure appropriate access and protection for applications.",
+            icon: ShieldCheck,
           },
         ],
         icon: CloudCog,
@@ -340,16 +410,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "audits",
             title: "Security Audits",
             description: "Review configurations and controls.",
+            icon: ClipboardCheck,
           },
           {
             id: "vulnerabilities",
             title: "Vulnerability Assessments",
             description: "Identify and prioritise weaknesses.",
+            icon: AlertTriangle,
           },
           {
             id: "penetration-testing",
             title: "Penetration Testing",
             description: "Test only within explicitly authorised scope.",
+            icon: Target,
           },
         ],
         icon: SearchCheck,
@@ -371,49 +444,58 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Network Security and Firewalls",
             description:
               "Design and configure appropriate perimeter and internal controls.",
+            icon: ShieldCheck,
           },
           {
             id: "endpoint",
             title: "Endpoint Protection",
             description: "Protect business devices.",
+            icon: MonitorSmartphone,
           },
           {
             id: "ids-ips",
             title: "IDS and IPS",
             description:
               "Add detection and prevention controls where appropriate.",
+            icon: Radar,
           },
           {
             id: "cloud-security",
             title: "Cloud Security",
             description: "Protect cloud access and workloads.",
+            icon: Cloud,
           },
           {
             id: "application-security",
             title: "Application Security",
             description: "Review application protections.",
+            icon: FileCheck,
           },
           {
             id: "network-monitoring",
             title: "Network Monitoring",
             description: "Improve visibility of network events.",
+            icon: Eye,
           },
           {
             id: "identity-security",
             title: "Identity Security",
             description: "Define access and authentication controls.",
+            icon: Fingerprint,
           },
           {
             id: "zero-trust",
             title: "Zero Trust",
             description:
               "Apply least-privilege access and verification principles.",
+            icon: KeyRound,
           },
           {
             id: "workspace-security",
             title: "Email and Workspace Security",
             description:
               "Protect business communications and user environments.",
+            icon: MailWarning,
           },
         ],
         icon: Layers,
@@ -434,17 +516,20 @@ export const serviceCategories: ServiceCategory[] = [
             id: "policies",
             title: "Security Policies",
             description: "Define responsibilities and controls.",
+            icon: ClipboardList,
           },
           {
             id: "incident-planning",
             title: "Incident Response Planning",
             description: "Prepare escalation and recovery procedures.",
+            icon: Siren,
           },
           {
             id: "compliance",
             title: "Compliance Planning",
             description:
               "Assess applicable obligations and improvement priorities.",
+            icon: FileCheck,
           },
         ],
         icon: ShieldCheck,
@@ -465,16 +550,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "risk-assessment",
             title: "Risk Assessment",
             description: "Identify and evaluate exposure.",
+            icon: Radar,
           },
           {
             id: "risk-treatment",
             title: "Risk Treatment",
             description: "Prioritise practical improvements.",
+            icon: ListChecks,
           },
           {
             id: "continuity",
             title: "Business Continuity",
             description: "Plan for operational disruption.",
+            icon: Repeat,
           },
         ],
         icon: ShieldAlert,
@@ -519,32 +607,38 @@ export const serviceCategories: ServiceCategory[] = [
             id: "predictive",
             title: "Predictive Analytics",
             description: "Explore patterns and forecasting use cases.",
+            icon: LineChart,
           },
           {
             id: "vision",
             title: "Computer Vision",
             description: "Apply visual analysis to suitable workflows.",
+            icon: Scan,
           },
           {
             id: "nlp",
             title: "Natural Language Processing",
             description:
               "Analyse text and support conversational interfaces.",
+            icon: MessageSquare,
           },
           {
             id: "automation",
             title: "RPA and Intelligent Automation",
             description: "Reduce repetitive tasks.",
+            icon: Bot,
           },
           {
             id: "ai-security",
             title: "AI in Cybersecurity",
             description: "Apply suitable analysis to security workflows.",
+            icon: ShieldCheck,
           },
           {
             id: "recommendations",
             title: "Recommendation Systems",
             description: "Support relevant personalised suggestions.",
+            icon: Sparkles,
           },
         ],
         icon: BrainCircuit,
@@ -565,31 +659,37 @@ export const serviceCategories: ServiceCategory[] = [
             id: "consulting",
             title: "Big Data Consulting",
             description: "Define data priorities.",
+            icon: ClipboardList,
           },
           {
             id: "integration",
             title: "Data Integration",
             description: "Connect relevant sources.",
+            icon: Combine,
           },
           {
             id: "realtime",
             title: "Real-Time Analytics",
             description: "Enable timely operational insight where needed.",
+            icon: Activity,
           },
           {
             id: "visualisation",
             title: "Data Visualisation",
             description: "Present information through clear dashboards.",
+            icon: FileBarChart,
           },
           {
             id: "cloud-data",
             title: "Cloud-Based Data Solutions",
             description: "Plan scalable data environments.",
+            icon: Cloud,
           },
           {
             id: "iot",
             title: "IoT Data",
             description: "Process relevant connected-device information.",
+            icon: Antenna,
           },
         ],
         icon: BarChart3,
@@ -610,21 +710,25 @@ export const serviceCategories: ServiceCategory[] = [
             id: "database",
             title: "Database Implementation",
             description: "Establish suitable data structures.",
+            icon: Database,
           },
           {
             id: "backup",
             title: "Backup and Recovery",
             description: "Define protection and restoration plans.",
+            icon: HardDrive,
           },
           {
             id: "access",
             title: "Access Control",
             description: "Limit data access by role.",
+            icon: KeyRound,
           },
           {
             id: "data-security",
             title: "Data Security",
             description: "Apply encryption and appropriate handling controls.",
+            icon: Lock,
           },
         ],
         icon: Database,
@@ -645,16 +749,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "mdm",
             title: "Mobile Device Management",
             description: "Coordinate enrolled business devices.",
+            icon: Tablet,
           },
           {
             id: "access",
             title: "Secure Mobile Access",
             description: "Apply controlled access to business resources.",
+            icon: Lock,
           },
           {
             id: "workforce",
             title: "Workforce Mobility",
             description: "Connect remote and mobile workflows.",
+            icon: Users2,
           },
         ],
         icon: Smartphone,
@@ -675,16 +782,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "planning",
             title: "Website Planning",
             description: "Define structure and visitor journeys.",
+            icon: ClipboardList,
           },
           {
             id: "development",
             title: "Responsive Development",
             description: "Build for desktop and mobile.",
+            icon: LayoutDashboard,
           },
           {
             id: "maintenance",
             title: "Launch and Maintenance",
             description: "Arrange launch checks and ongoing updates.",
+            icon: Wrench,
           },
         ],
         icon: Globe,
@@ -705,16 +815,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "portals",
             title: "Business Portals",
             description: "Connect users and information.",
+            icon: MonitorSmartphone,
           },
           {
             id: "workflows",
             title: "Workflow Applications",
             description: "Simplify agreed processes.",
+            icon: Combine,
           },
           {
             id: "integration",
             title: "System Integration",
             description: "Connect relevant business tools.",
+            icon: Link2,
           },
         ],
         icon: LayoutGrid,
@@ -735,16 +848,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "planning",
             title: "Application Planning",
             description: "Define users and features.",
+            icon: ClipboardList,
           },
           {
             id: "development",
             title: "Mobile Development",
             description: "Build agreed platform functionality.",
+            icon: Smartphone,
           },
           {
             id: "support",
             title: "Integration and Support",
             description: "Connect systems and arrange maintenance.",
+            icon: LifeBuoy,
           },
         ],
         icon: Smartphone,
@@ -765,16 +881,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "assets",
             title: "Brand and Marketing Assets",
             description: "Prepare agreed visual materials.",
+            icon: Palette,
           },
           {
             id: "digital",
             title: "Digital Creatives",
             description: "Design assets for online channels.",
+            icon: Sparkles,
           },
           {
             id: "collateral",
             title: "Business Collateral",
             description: "Develop presentations and print-ready materials.",
+            icon: FileText,
           },
         ],
         icon: Palette,
@@ -795,16 +914,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "planning",
             title: "Campaign Planning",
             description: "Define audience and objectives.",
+            icon: Target,
           },
           {
             id: "execution",
             title: "Content and Channel Execution",
             description: "Deliver the agreed channel scope.",
+            icon: Send,
           },
           {
             id: "reporting",
             title: "Performance Reporting",
             description: "Review results against agreed measures.",
+            icon: FileBarChart,
           },
         ],
         icon: Megaphone,
@@ -855,23 +977,27 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Corporate AV",
             description:
               "Plan smart displays and meeting-room collaboration systems.",
+            icon: MonitorPlay,
           },
           {
             id: "education-av",
             title: "Education AV",
             description:
               "Provide display and presentation technology for educational spaces. This is equipment integration, not training programmes.",
+            icon: Projector,
           },
           {
             id: "integration",
             title: "Installation and Integration",
             description:
               "Connect AV systems with existing IT and room requirements.",
+            icon: Link2,
           },
           {
             id: "support",
             title: "AV Support",
             description: "Arrange maintenance under the agreed scope.",
+            icon: LifeBuoy,
           },
         ],
         icon: MonitorPlay,
@@ -919,16 +1045,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "planning",
             title: "Camera Planning",
             description: "Assess coverage requirements.",
+            icon: Camera,
           },
           {
             id: "monitoring",
             title: "Recording and Monitoring",
             description: "Select recording and viewing arrangements.",
+            icon: Video,
           },
           {
             id: "support",
             title: "Integration and Maintenance",
             description: "Coordinate agreed integration and service needs.",
+            icon: Wrench,
           },
         ],
         icon: Cctv,
@@ -949,16 +1078,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "access",
             title: "Entry and Exit Control",
             description: "Manage authorised vehicle movement.",
+            icon: ParkingCircle,
           },
           {
             id: "operations",
             title: "Parking Operations",
             description: "Define the required management workflow.",
+            icon: SlidersHorizontal,
           },
           {
             id: "integration",
             title: "System Integration",
             description: "Connect suitable controls and monitoring systems.",
+            icon: Link2,
           },
         ],
         icon: SquareParking,
@@ -979,17 +1111,20 @@ export const serviceCategories: ServiceCategory[] = [
             id: "access",
             title: "Access Control",
             description: "Define credentials and access permissions.",
+            icon: KeyRound,
           },
           {
             id: "intercom",
             title: "Intercom Systems",
             description: "Support visitor communication.",
+            icon: PhoneCall,
           },
           {
             id: "integration",
             title: "Integration",
             description:
               "Connect access and communication systems where appropriate.",
+            icon: Link2,
           },
         ],
         icon: KeyRound,
@@ -1010,16 +1145,19 @@ export const serviceCategories: ServiceCategory[] = [
             id: "iot",
             title: "IoT Devices and Sensors",
             description: "Source and integrate suitable connected components.",
+            icon: Antenna,
           },
           {
             id: "automation",
             title: "Lighting and HVAC Automation",
             description: "Coordinate agreed control functions.",
+            icon: Lightbulb,
           },
           {
             id: "access",
             title: "Smart Access",
             description: "Connect relevant building access technology.",
+            icon: DoorOpen,
           },
         ],
         icon: Building2,
@@ -1067,21 +1205,25 @@ export const serviceCategories: ServiceCategory[] = [
             id: "strategy",
             title: "IT Strategy",
             description: "Define business-aligned priorities.",
+            icon: Target,
           },
           {
             id: "infrastructure",
             title: "Infrastructure Planning",
             description: "Assess capacity and architecture.",
+            icon: Server,
           },
           {
             id: "integration",
             title: "System Integration",
             description: "Coordinate connected tools.",
+            icon: Link2,
           },
           {
             id: "transformation",
             title: "Digital Transformation",
             description: "Plan phased technology improvements.",
+            icon: RefreshCw,
           },
         ],
         icon: Compass,
@@ -1102,27 +1244,32 @@ export const serviceCategories: ServiceCategory[] = [
             id: "updates",
             title: "System Updates",
             description: "Coordinate patches and firmware changes.",
+            icon: RefreshCw,
           },
           {
             id: "monitoring",
             title: "Proactive Monitoring",
             description: "Review service health under the agreed coverage.",
+            icon: Activity,
           },
           {
             id: "optimisation",
             title: "Performance Optimisation",
             description: "Address relevant bottlenecks.",
+            icon: Gauge,
           },
           {
             id: "repairs",
             title: "Troubleshooting and Repairs",
             description: "Resolve supported technical issues.",
+            icon: Wrench,
           },
           {
             id: "asset-lifecycle",
             title: "Asset Lifecycle Management",
             description:
               "Plan procurement, maintenance, refresh and appropriate disposal.",
+            icon: Recycle,
           },
         ],
         icon: Wrench,
@@ -1143,17 +1290,20 @@ export const serviceCategories: ServiceCategory[] = [
             id: "user-support",
             title: "User Support",
             description: "Assist with supported workplace issues.",
+            icon: Headset,
           },
           {
             id: "infrastructure",
             title: "Infrastructure Support",
             description: "Coordinate supported systems and networks.",
+            icon: Server,
           },
           {
             id: "support-plan",
             title: "Support Planning",
             description:
               "Define coverage, priorities and escalation. Hours and response commitments are confirmed with each client.",
+            icon: ClipboardList,
           },
         ],
         icon: Headset,
@@ -1195,4 +1345,71 @@ export function getRelatedServices(
 /** Approved pages only — used for navigation, category listings and the sitemap. */
 export function approvedPages(pages: ServicePage[]): ServicePage[] {
   return pages.filter((page) => page.approved);
+}
+
+/**
+ * A short, deduplicated set of icons representing a service page, used to
+ * populate its hero illustration: the page's own icon plus its first few
+ * scope-item icons.
+ */
+export function heroIconsForService(service: ServicePage): LucideIcon[] {
+  const icons = [service.icon, ...service.scope.map((item) => item.icon)];
+  return Array.from(new Set(icons)).slice(0, 4);
+}
+
+/**
+ * A short, deduplicated set of icons representing a category, used to
+ * populate its hero illustration: the category's own icon plus the lead
+ * icon from each of its first few child pages.
+ */
+export function heroIconsForCategory(category: ServiceCategory): LucideIcon[] {
+  const icons = [category.icon, ...category.pages.map((page) => page.icon)];
+  return Array.from(new Set(icons)).slice(0, 4);
+}
+
+/**
+ * Short, benefit-led hero taglines for the redesigned service pages, keyed
+ * by category or service slug. The eyebrow, breadcrumb and page metadata
+ * keep using the approved category/service names unchanged — this is only
+ * the large display line in the new hero template, in the spirit of the
+ * brief's own "The foundation for your digital business." example.
+ */
+export const heroHeadlines: Record<string, string> = {
+  "infrastructure-networking": "A stronger foundation for how your business runs.",
+  "cloud-aws": "Cloud that moves at the pace of your business.",
+  cybersecurity: "Protection built around how your business actually works.",
+  "ai-data-applications": "Turn your data and applications into an advantage.",
+  "av-collaboration": "Spaces built for clearer collaboration.",
+  "smart-security": "Premises technology that works as one system.",
+  "consulting-managed-it": "Technology decisions and support, aligned to your business.",
+
+  "it-infrastructure": "The foundation for your digital business.",
+  "network-services": "Keep every location and application connected.",
+  "cloud-computing": "A cloud environment built around your workloads.",
+  "aws-solutions": "AWS, planned and managed around your business.",
+  "cyber-risk-auditing": "Know where your real exposure lies.",
+  "cyber-security-architecture": "Layered protection for your whole environment.",
+  "cyber-security-consultancy": "Make security part of how you plan.",
+  "cyber-risk-management": "Manage risk before it becomes disruption.",
+  "ai-development": "Turn your data into informed decisions.",
+  "big-data-analytics": "Bring your business information together.",
+  "data-management-security": "Protect the data your business runs on.",
+  "mobility-solutions": "Keep your workforce connected, wherever they work.",
+  "website-development": "A website built around how customers find you.",
+  "web-applications": "Applications built around how your teams work.",
+  "mobile-applications": "Bring your workflows to mobile devices.",
+  "graphic-design": "Visual materials that communicate your business clearly.",
+  "digital-marketing": "A marketing approach built around your audience.",
+  "audio-visual-solutions": "Spaces designed for clearer collaboration.",
+  "cctv-surveillance": "Better visibility across your premises.",
+  "parking-management": "Vehicle access, organised around your site.",
+  "access-control-intercom": "Manage entry and visitor communication as one system.",
+  "smart-building-systems": "Bring your premises systems under one plan.",
+  "it-consultancy": "Technology decisions aligned to your business priorities.",
+  "operation-maintenance": "Keep your technology environment running reliably.",
+  "managed-it-support": "Day-to-day support, organised around your business.",
+};
+
+export function getHeroHeadline(slug: string): string {
+  return heroHeadlines[slug] ?? slug;
 }

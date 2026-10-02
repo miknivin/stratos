@@ -150,6 +150,27 @@ export const categoryProcess = [
   },
 ] as const;
 
+/** Service-detail-page delivery strip (distinct final label from the category version). */
+export const serviceDeliverySteps = [
+  {
+    title: "Assess",
+    description: "Review your current environment and requirements.",
+  },
+  {
+    title: "Design",
+    description: "Define the right architecture and scope.",
+  },
+  {
+    title: "Implement",
+    description: "Deploy and integrate the agreed solution.",
+  },
+  {
+    title: "Handover & Support",
+    description:
+      "Document the handover. Ongoing support depends on your selected service agreement.",
+  },
+] as const;
+
 export const serviceDelivery = {
   heading: "From Requirement to Working Solution",
   body: "We review your requirements and existing environment, define the appropriate scope, implement the agreed solution and document the handover. Ongoing support is arranged according to your selected service agreement.",

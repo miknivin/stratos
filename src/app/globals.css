@@ -26,6 +26,10 @@
   --color-mist-400: #9691a8;
   --color-mist-500: #6b6680;
 
+  /* Lavender accent used for soft illumination on the services visual system */
+  --color-lavender-100: #eee6f7;
+  --color-lavender-300: #cdb8e6;
+
   --gradient-brand: linear-gradient(
     135deg,
     var(--color-brand-400) 0%,
@@ -59,6 +63,9 @@
   --color-mist-200: var(--color-mist-200);
   --color-mist-400: var(--color-mist-400);
   --color-mist-500: var(--color-mist-500);
+
+  --color-lavender-100: var(--color-lavender-100);
+  --color-lavender-300: var(--color-lavender-300);
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-marquee: marquee 34s linear infinite;
