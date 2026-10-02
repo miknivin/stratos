@@ -2,8 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { navLinks, siteConfig } from "@/lib/site-config";
-import { services } from "@/lib/services-data";
+import { siteConfig } from "@/lib/site-config";
+import { serviceCategories } from "@/lib/services-data";
+
+const companyLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Products", href: "/products" },
+  { label: "Brands", href: "/brands" },
+  { label: "Contact", href: "/contact" },
+];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -11,7 +19,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/8 bg-navy-950">
       <Container className="py-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr_1.1fr]">
           <div className="flex flex-col gap-4">
             <Image
               src="/brand/logo-dark.png"
@@ -21,7 +29,9 @@ export function Footer() {
               className="h-8 w-auto self-start"
             />
             <p className="max-w-xs text-sm leading-relaxed text-white/55">
-              {siteConfig.description}
+              STRATOS INFO TECH delivers integrated IT solutions and hardware
+              distribution from Abu Dhabi, helping UAE businesses connect,
+              operate, innovate and grow.
             </p>
             <p dir="rtl" className="text-sm text-white/35">
               {siteConfig.arabicName}
@@ -31,7 +41,7 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white">Company</h3>
             <ul className="mt-4 space-y-3">
-              {navLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -47,13 +57,13 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white">Services</h3>
             <ul className="mt-4 space-y-3">
-              {services.slice(0, 6).map((service) => (
-                <li key={service.slug}>
+              {serviceCategories.map((category) => (
+                <li key={category.slug}>
                   <Link
-                    href={`/services/${service.slug}`}
+                    href={`/services/${category.slug}`}
                     className="text-sm text-white/55 transition-colors hover:text-white"
                   >
-                    {service.shortTitle}
+                    {category.shortName}
                   </Link>
                 </li>
               ))}

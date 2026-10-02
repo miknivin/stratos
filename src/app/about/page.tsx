@@ -1,32 +1,42 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/page-hero";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { CompanyStory } from "@/components/about/company-story";
+import { OurPurpose } from "@/components/about/our-purpose";
 import { ValuesGrid } from "@/components/about/values-grid";
-import { ProductsGrid } from "@/components/about/products-grid";
-import { StatsBand } from "@/components/ui/stats-band";
+import { OurExpertise } from "@/components/about/our-expertise";
 import { CTABand } from "@/components/ui/cta-band";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: { absolute: "About STRATOS INFO TECH | Abu Dhabi IT Solutions" },
   description:
-    "Stratos Info Tech is an Abu Dhabi based technology company delivering cybersecurity, cloud, AI, network and hardware distribution services to modern enterprises.",
+    "STRATOS INFO TECH is an Abu Dhabi-based technology company providing integrated IT solutions and hardware distribution for businesses across the UAE.",
 };
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Stratos Info Tech"
-        title="Empowering businesses by aligning technology with strategy"
-        description="We're a full-service technology company headquartered in Abu Dhabi, combining cybersecurity expertise, cloud and AI services, and trusted hardware distribution under one roof."
+        eyebrow="About STRATOS"
+        title="Your Technology Partner in the UAE"
+        description="Integrated IT solutions, specialist services and hardware distribution from Abu Dhabi."
+        breadcrumb={
+          <Breadcrumbs
+            items={[{ label: "Home", href: "/" }, { label: "About" }]}
+          />
+        }
       />
       <CompanyStory />
+      <OurPurpose />
       <ValuesGrid />
-      <ProductsGrid />
-      <StatsBand />
+      <OurExpertise />
       <CTABand
-        title="Let's talk about your technology roadmap"
-        description="Whether you need a security audit, a cloud migration plan, or a trusted hardware partner, our team is ready to help."
+        title="Let's Discuss Your Technology Goals"
+        description="Planning a new setup, upgrading your systems or looking for ongoing support? Tell us what your business needs."
+        primaryLabel="Talk to an IT Expert"
+        primaryHref="/contact"
+        secondaryLabel="Explore services"
+        secondaryHref="/services"
       />
     </>
   );

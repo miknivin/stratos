@@ -21,17 +21,19 @@ export function AboutTeaser() {
         <div className="lg:order-2">
           <Eyebrow>About us</Eyebrow>
           <h2 className="mt-6 text-2xl font-semibold tracking-tight text-balance text-ink-900 sm:text-3xl">
-            Headquartered in Abu Dhabi, built to secure enterprises across
-            the UAE
+            One Partner for Your Complete IT Environment
           </h2>
           <p className="mt-5 text-base leading-relaxed text-pretty text-mist-500 sm:text-lg">
-            STRATOS INFO TECH delivers cybersecurity, cloud, AI and network
-            solutions alongside trusted hardware distribution, backed by a
-            disciplined, customer-focused team.
+            STRATOS INFO TECH is an Abu Dhabi-based technology company
+            providing integrated IT solutions and hardware distribution for
+            businesses across the UAE. Our experienced consultants and
+            engineers help connect infrastructure, networks, cloud,
+            cybersecurity, AI and data into a practical technology
+            environment built around your business.
           </p>
           <div className="mt-8">
             <Button href="/about" variant="outline-ink">
-              About us
+              Discover STRATOS
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

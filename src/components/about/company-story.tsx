@@ -8,20 +8,20 @@ const blocks = [
     image: "/images/about-who-we-are.jpg",
     imageAlt: "Stratos Info Tech team collaborating",
     eyebrow: "Who we are",
-    title: "A full-service technology partner headquartered in Abu Dhabi",
+    title: "An information technology company headquartered in Abu Dhabi",
     paragraphs: [
-      "STRATOS INFO TECH is a leading information technology company headquartered in Abu Dhabi, United Arab Emirates. We specialize in delivering a comprehensive range of IT and security solutions tailored to modern enterprises.",
-      "Our expertise spans wholesale distribution of advanced hardware, as well as cutting-edge cybersecurity, cloud, and AI services. By partnering with top manufacturers and leveraging industry best practices, we've built a reputation for quality and customer satisfaction, and as organizations worldwide increase their cybersecurity investments, we're well positioned to meet this growing demand with reliable solutions.",
+      "STRATOS INFO TECH is an information technology company headquartered in Abu Dhabi, United Arab Emirates. We help businesses build, connect, protect and improve their technology environments through a comprehensive range of IT services and wholesale hardware solutions.",
+      "Our experienced consultants and engineers tailor solutions to each organisation's requirements, bringing together infrastructure planning, network services, cloud computing, AI development, data management and cybersecurity. Our approach connects business priorities with practical technology choices, from an initial requirement to implementation and support.",
     ],
   },
   {
     image: "/images/about-our-goals.jpg",
-    imageAlt: "Stratos Info Tech engineer securing a network",
-    eyebrow: "Our goals",
-    title: "Innovation, excellence and integrity in every engagement",
+    imageAlt: "Stratos Info Tech engineer reviewing a connected system",
+    eyebrow: "What we bring together",
+    title: "A complete technology environment where systems work together",
     paragraphs: [
-      "We are driven by a commitment to innovation, excellence, and integrity, and we strive to empower businesses by aligning technology with their strategic needs.",
-      "Our goal is to foster long-term partnerships through creative problem-solving, disciplined execution, and the highest standards of service, maintaining strict quality control and a customer-focused approach in every project we take on.",
+      "A complete technology environment depends on systems working together. Our expanded service offering connects infrastructure and cloud with business applications, analytics, collaboration, smart systems and ongoing IT support.",
+      "We plan each engagement around the agreed scope and your existing environment.",
     ],
   },
 ];

@@ -6,10 +6,12 @@ export function PageHero({
   eyebrow,
   title,
   description,
+  breadcrumb,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   description?: React.ReactNode;
+  breadcrumb?: React.ReactNode;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy-900 py-20 sm:py-24">
@@ -32,6 +34,7 @@ export function PageHero({
         aria-hidden
       />
       <Container className="relative max-w-3xl">
+        {breadcrumb ? <div className="mb-4">{breadcrumb}</div> : null}
         <Eyebrow tone="light">{eyebrow}</Eyebrow>
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
           {title}

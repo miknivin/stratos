@@ -49,7 +49,7 @@ export default async function Image() {
             maxWidth: 820,
           }}
         >
-          Cybersecurity, cloud &amp; IT solutions for modern enterprises
+          Complete IT solutions and hardware distribution for the UAE
         </div>
       </div>
     ),

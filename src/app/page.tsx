@@ -1,20 +1,24 @@
 import { Hero } from "@/components/home/hero";
+import { CapabilityStrip } from "@/components/home/capability-strip";
 import { AboutTeaser } from "@/components/home/about-teaser";
-import { BrandsRow } from "@/components/home/brands-row";
 import { ServicesOverview } from "@/components/home/services-overview";
+import { ProductFeature } from "@/components/home/product-feature";
+import { DeliveryProcess } from "@/components/home/delivery-process";
 import { WhyStratos } from "@/components/home/why-stratos";
-import { StatsBand } from "@/components/ui/stats-band";
+import { BrandsRow } from "@/components/home/brands-row";
 import { CTABand } from "@/components/ui/cta-band";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <CapabilityStrip />
       <AboutTeaser />
-      <BrandsRow />
       <ServicesOverview />
+      <ProductFeature />
+      <DeliveryProcess />
       <WhyStratos />
-      <StatsBand />
+      <BrandsRow />
       <CTABand />
     </>
   );

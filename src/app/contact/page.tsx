@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/page-hero";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactInfo } from "@/components/contact/contact-info";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: { absolute: "Contact STRATOS INFO TECH | Abu Dhabi" },
   description:
-    "Get in touch with Stratos Info Tech in Abu Dhabi for cybersecurity, cloud, IT consultancy and network services.",
+    "Whether you are planning new infrastructure, moving to the cloud, improving your business systems or sourcing technology products, tell STRATOS INFO TECH what you need.",
 };
 
 export default function ContactPage() {
@@ -15,8 +16,13 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact us"
-        title="Let's talk about your technology needs"
-        description="Reach out for a security audit, a cloud migration plan, or to learn more about our services. Our team typically responds within one business day."
+        title="Let's Discuss Your IT Requirements"
+        description="Whether you are planning new infrastructure, moving to the cloud, improving your business systems or sourcing technology products, tell us what you need. STRATOS will help you define the next step."
+        breadcrumb={
+          <Breadcrumbs
+            items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
+          />
+        }
       />
 
       <section className="bg-white py-24 sm:py-28">

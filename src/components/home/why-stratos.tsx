@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
-import { values } from "@/lib/site-config";
+import { whyStratos } from "@/lib/site-config";
 
 const NETWORK_NODES = [
   { x: 46, y: 46, r: 4 },
@@ -198,14 +198,13 @@ export function WhyStratos() {
           <Reveal>
             <Eyebrow>Why Stratos</Eyebrow>
             <h2 className="mt-6 text-3xl font-semibold tracking-tight text-balance text-ink-900 sm:text-4xl">
-              A disciplined, customer-focused approach to every engagement
+              A connected, business-led approach to every engagement
             </h2>
             <p className="mt-5 text-base leading-relaxed text-pretty text-mist-500 sm:text-lg">
-              STRATOS INFO TECH is driven by a commitment to innovation,
-              excellence, and integrity. We strive to empower businesses by
-              aligning technology with their strategic needs, fostering
-              long-term partnerships through creative problem-solving,
-              disciplined execution, and the highest standards of service.
+              STRATOS INFO TECH brings hardware, infrastructure and
+              specialist IT services into one coordinated plan, built around
+              your priorities, existing systems and budget, and delivered by
+              an Abu Dhabi-based team serving businesses across the UAE.
             </p>
             <div className="mt-8">
               <Button href="/about" variant="outline-ink">
@@ -222,7 +221,7 @@ export function WhyStratos() {
               <ShootingStars />
 
               <ul className="relative grid grid-cols-1 gap-2 sm:grid-cols-2">
-                {values.map((value) => (
+                {whyStratos.map((value) => (
                   <li
                     key={value.title}
                     className="group/item flex gap-3 rounded-2xl border border-transparent p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-ink-900/8 hover:bg-white hover:shadow-lg hover:shadow-ink-900/5"

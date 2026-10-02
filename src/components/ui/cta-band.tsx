@@ -4,9 +4,9 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 
 export function CTABand({
-  title = "Ready to strengthen your security posture?",
-  description = "Tell us about your infrastructure and goals, and our consultants will help you find the right mix of services.",
-  primaryLabel = "Contact our team",
+  title = "Let's Build the Right IT Solution for Your Business",
+  description = "Planning a new setup, upgrading your systems or looking for ongoing support? Tell us what your business needs.",
+  primaryLabel = "Talk to an IT Expert",
   primaryHref = "/contact",
   secondaryLabel = "Browse services",
   secondaryHref = "/services",
