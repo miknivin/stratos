@@ -206,8 +206,8 @@ export const heroSlides: HeroSlide[] = [
     body: "From infrastructure and cloud to cybersecurity, AI and business systems, STRATOS brings experienced consultants and engineers together to support your technology needs across the UAE.",
     primaryLabel: "Explore Our Services",
     primaryHref: "/services",
-    image: "/images/hero-visual.jpg",
-    alt: "STRATOS Info Tech technology dashboard overview",
+    image: "/images/hero-banners/graphite-enterprise-ecosystem.png",
+    alt: "Connected servers, workstations and cloud infrastructure for a UAE enterprise, with the Abu Dhabi skyline in the background",
   },
   {
     eyebrow: "Infrastructure & Network",
@@ -215,8 +215,8 @@ export const heroSlides: HeroSlide[] = [
     body: "Connect your people, applications and locations with infrastructure and network solutions designed by experienced professionals around performance, reliability and future growth.",
     primaryLabel: "Explore Infrastructure",
     primaryHref: "/services/infrastructure-networking",
-    image: "/images/hero-visual-2.jpg",
-    alt: "STRATOS Info Tech infrastructure and network planning",
+    image: "/images/infrastructure-networking-hero.png",
+    alt: "Server racks, network switches and workplace devices connected on a data platform",
   },
   {
     eyebrow: "Cloud & Business Continuity",
@@ -224,8 +224,8 @@ export const heroSlides: HeroSlide[] = [
     body: "From readiness assessment and migration to workload management and recovery planning, our team helps you build a practical cloud environment for your business.",
     primaryLabel: "Explore Cloud Solutions",
     primaryHref: "/services/cloud-aws",
-    image: "/images/hero-visual-3.jpg",
-    alt: "STRATOS Info Tech cloud environment planning",
+    image: "/images/hero-banners/frosted-cloud-continuity.png",
+    alt: "Server racks connected to a cloud platform, representing continuity between on-site infrastructure and the cloud",
   },
   {
     eyebrow: "AI, Data & Applications",
@@ -233,8 +233,8 @@ export const heroSlides: HeroSlide[] = [
     body: "Use AI, analytics and connected applications to simplify workflows, understand your data and make better decisions, with solutions shaped around your business priorities.",
     primaryLabel: "Explore AI & Data",
     primaryHref: "/services/ai-data-applications",
-    image: "/images/hero-visual.jpg",
-    alt: "STRATOS Info Tech data and automation dashboard",
+    image: "/images/hero-banners/connected-ai-data-core.png",
+    alt: "A connected data core with analytics panels and workflow diagrams",
   },
   {
     eyebrow: "Collaboration & Smart Systems",

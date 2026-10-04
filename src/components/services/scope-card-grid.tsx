@@ -19,6 +19,7 @@ export function ScopeCardGrid({ items }: { items: ScopeItem[] }) {
           <IllustratedCard
             id={item.id}
             icon={item.icon}
+            image={item.image}
             title={item.title}
             description={item.description}
           />

@@ -13,6 +13,7 @@ export function RelatedServices({ services }: { services: ServicePage[] }) {
           <IllustratedCard
             href={`/services/${service.slug}`}
             icon={service.icon}
+            image={service.image}
             title={service.shortTitle}
             description={service.summary}
             linkLabel="Learn more"

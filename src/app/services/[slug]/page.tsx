@@ -91,9 +91,10 @@ export default async function ServicesSlugPage(
  * the exact "repeated introduction" the brief flags on the current site.
  */
 function dedupeIntro(summary: string, intro: string[]): string[] {
-  if (intro.length === 1 && intro[0].startsWith(summary)) {
-    const rest = intro[0].slice(summary.length).trim();
-    return rest ? [rest] : [];
+  const [first, ...rest] = intro;
+  if (first && first.startsWith(summary)) {
+    const strippedFirst = first.slice(summary.length).trim();
+    return strippedFirst ? [strippedFirst, ...rest] : rest;
   }
   return intro;
 }
@@ -120,6 +121,7 @@ function CategoryOverview({ category }: { category: ServiceCategory }) {
         title={getHeroHeadline(category.slug)}
         description={category.intro}
         icons={heroIconsForCategory(category)}
+        image={category.heroImage}
         primaryLabel="Talk to an IT Expert"
         primaryHref="/contact"
         secondaryLabel="View all services"
@@ -142,6 +144,7 @@ function CategoryOverview({ category }: { category: ServiceCategory }) {
                 <IllustratedCard
                   href={`/services/${page.slug}`}
                   icon={page.icon}
+                  image={page.image}
                   title={page.shortTitle}
                   description={page.summary}
                   linkLabel="Explore solution"
@@ -231,6 +234,7 @@ function ServiceDetail({ service }: { service: ServicePage }) {
         title={getHeroHeadline(service.slug)}
         description={service.summary}
         icons={heroIconsForService(service)}
+        image={service.image}
         primaryLabel="Request a Consultation"
         primaryHref={`/contact?service=${service.slug}`}
         secondaryLabel="View scope"

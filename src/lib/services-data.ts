@@ -83,6 +83,8 @@ export type ScopeItem = {
   description: string;
   /** Used by the illustrated scope cards and derived hero illustrations. */
   icon: LucideIcon;
+  /** Real designer artwork for this scope card, once delivered — falls back to the placeholder scene when absent. */
+  image?: { src: string; alt: string };
 };
 
 export type ServicePage = {
@@ -102,6 +104,8 @@ export type ServicePage = {
    * content is ready to switch on.
    */
   approved: boolean;
+  /** Real designer artwork for this service, once delivered — falls back to the placeholder scene when absent. */
+  image?: { src: string; alt: string };
 };
 
 export type NavSubItem = { label: string; href: string };
@@ -116,6 +120,8 @@ export type ServiceCategory = {
   /** Curated flat list shown in the Services mega menu for this category. */
   navItems: NavSubItem[];
   pages: ServicePage[];
+  /** Real designer artwork for the category hero, once delivered — falls back to the placeholder scene when absent. */
+  heroImage?: { src: string; alt: string };
 };
 
 export const serviceCategories: ServiceCategory[] = [
@@ -131,21 +137,13 @@ export const serviceCategories: ServiceCategory[] = [
       "Capacity for growth",
       "Simpler infrastructure coordination",
     ],
+    heroImage: {
+      src: "/images/infrastructure-networking-hero.png",
+      alt: "Server racks, network switches and workplace devices connected on a data platform",
+    },
     navItems: [
       { label: "IT Infrastructure", href: "/services/it-infrastructure" },
       { label: "Network Services", href: "/services/network-services" },
-      {
-        label: "Servers, Backup & Storage",
-        href: "/services/it-infrastructure#servers-backup-storage",
-      },
-      {
-        label: "Enterprise Software",
-        href: "/services/it-infrastructure#enterprise-software",
-      },
-      {
-        label: "End-User Devices",
-        href: "/services/it-infrastructure#end-user-devices",
-      },
     ],
     pages: [
       {
@@ -165,6 +163,10 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Support business workloads with suitable compute, protected storage and recovery planning.",
             icon: HardDrive,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/IT-Infrastructure/includes/servers-backup-storage.png",
+              alt: "Server racks, rack-mounted storage units and a NAS enclosure",
+            },
           },
           {
             id: "enterprise-software",
@@ -172,6 +174,10 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Connect business processes, service workflows and asset records through appropriately selected systems.",
             icon: Boxes,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/IT-Infrastructure/includes/enterprise-software.png",
+              alt: "A laptop showing a connected workflow diagram, surrounded by process and asset-management panels",
+            },
           },
           {
             id: "end-user-devices",
@@ -179,10 +185,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Source and configure laptops, desktops, hard drives and printers for workplace requirements.",
             icon: Laptop,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/IT-Infrastructure/includes/end-user-devices.png",
+              alt: "A laptop, desktop monitor and tower, printer and external hard drives",
+            },
           },
         ],
         icon: Server,
         approved: true,
+        image: {
+          src: "/images/services/Infrastructure-and-Networking/IT-Infrastructure/enterprise-IT-infrastructure-ecosystem.png",
+          alt: "Server racks, storage units, a laptop, monitor and printer connected on a data platform",
+        },
       },
       {
         slug: "network-services",
@@ -200,18 +214,30 @@ export const serviceCategories: ServiceCategory[] = [
             title: "LAN and WAN",
             description: "Connect office and multi-location systems.",
             icon: Route,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/network-services/includes/lan-wan.png",
+              alt: "Multiple connected office buildings linked through network switches",
+            },
           },
           {
             id: "wifi",
             title: "Wireless Networking",
             description: "Plan coverage and capacity for productive access.",
             icon: Wifi,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/network-services/includes/wireless-networking.png",
+              alt: "Wireless access points broadcasting coverage to a laptop and tablet in an office",
+            },
           },
           {
             id: "vpn",
             title: "VPN and Remote Connectivity",
             description: "Enable controlled access to business resources.",
             icon: Lock,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/network-services/includes/vpn-remote-connectivity.png",
+              alt: "A laptop connected through a secure encrypted tunnel to an office network",
+            },
           },
           {
             id: "optimisation",
@@ -219,10 +245,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Review performance and address connectivity bottlenecks.",
             icon: Gauge,
+            image: {
+              src: "/images/services/Infrastructure-and-Networking/network-services/includes/network-optimisation.png",
+              alt: "A performance gauge and global network map above a switch and router",
+            },
           },
         ],
         icon: Network,
         approved: true,
+        image: {
+          src: "/images/services/Infrastructure-and-Networking/network-services/network-services-hero.png",
+          alt: "Network switches, a router and wireless access points connected to office workstations",
+        },
       },
     ],
   },
@@ -238,6 +272,10 @@ export const serviceCategories: ServiceCategory[] = [
       "Clearer workload planning",
       "Better visibility of cloud operations",
     ],
+    heroImage: {
+      src: "/images/services/cloud-aws/connected-cloud-infrastructure-hero.png",
+      alt: "Server clusters connected to a glowing cloud platform",
+    },
     navItems: [
       { label: "Cloud Computing", href: "/services/cloud-computing" },
       { label: "AWS Solutions", href: "/services/aws-solutions" },
@@ -259,12 +297,20 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Cloud Assessment and Planning",
             description: "Review workloads and define the target environment.",
             icon: FileSearch,
+            image: {
+              src: "/images/services/cloud-aws/cloud-computing/cloud-assessment-and-planning.png",
+              alt: "A magnifying glass examining a workload architecture diagram connected to databases",
+            },
           },
           {
             id: "migration",
             title: "Migration and Deployment",
             description: "Plan and implement the move in agreed stages.",
             icon: UploadCloud,
+            image: {
+              src: "/images/services/cloud-aws/cloud-computing/migration-and-deployment.png",
+              alt: "Data moving across staged steps from a server rack to a cloud platform and server cluster",
+            },
           },
           {
             id: "operations",
@@ -278,12 +324,20 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Track service health within the agreed support scope.",
             icon: Activity,
+            image: {
+              src: "/images/services/cloud-aws/cloud-computing/cloud-monitoring.png",
+              alt: "A laptop showing service health metrics beside a pulse-style monitoring screen and connected server racks",
+            },
           },
           {
             id: "cost",
             title: "Cost Optimisation",
             description: "Review usage and resource allocation.",
             icon: PieChart,
+            image: {
+              src: "/images/services/cloud-aws/cloud-computing/cost-optimisation.png",
+              alt: "A laptop showing usage charts beside cloud resources and stacked coins representing cost review",
+            },
           },
           {
             id: "support",
@@ -291,10 +345,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Arrange technical assistance under the selected agreement.",
             icon: LifeBuoy,
+            image: {
+              src: "/images/services/cloud-aws/cloud-computing/cloud-support.png",
+              alt: "A laptop with cloud service icons beside a headset, representing technical support",
+            },
           },
         ],
         icon: Cloud,
         approved: true,
+        image: {
+          src: "/images/services/cloud-aws/cloud-computing/cloud-computing-hero.png",
+          alt: "Multiple server clusters connected to a cloud platform, with a laptop showing a connected workload diagram",
+        },
       },
       {
         slug: "aws-solutions",
@@ -305,6 +367,7 @@ export const serviceCategories: ServiceCategory[] = [
           "Plan, migrate and manage business workloads on Amazon Web Services with a solution designed around your requirements.",
         intro: [
           "Plan, migrate and manage business workloads on Amazon Web Services with a solution designed around your requirements. STRATOS brings together architecture planning, workload migration and application protection.",
+          "We start by reviewing your current workloads, including any VMware environments, to identify a suitable AWS architecture and migration pathway. Once the target environment is agreed, we manage the move in defined stages and configure access and protection for the applications that depend on it.",
         ],
         scope: [
           {
@@ -312,6 +375,10 @@ export const serviceCategories: ServiceCategory[] = [
             title: "AWS Consulting and Workloads",
             description: "Define requirements and a suitable deployment plan.",
             icon: ClipboardList,
+            image: {
+              src: "/images/services/cloud-aws/aws/includes/aws-consulting-and-workloads.png",
+              alt: "A laptop showing workload options beside a requirements checklist and a workload architecture diagram",
+            },
           },
           {
             id: "vmware",
@@ -319,12 +386,20 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Assess supported migration pathways and current platform availability before recommending a deployment.",
             icon: GitBranch,
+            image: {
+              src: "/images/services/cloud-aws/aws/includes/vmware-workload-migration.png",
+              alt: "A virtualised workload cluster migrating from on-site servers to an AWS cloud platform",
+            },
           },
           {
             id: "migration",
             title: "AWS Migration",
             description: "Move agreed workloads with a defined transition plan.",
             icon: UploadCloud,
+            image: {
+              src: "/images/services/cloud-aws/aws/includes/aws-migration.png",
+              alt: "Data moving in stages from an on-site server to an AWS cloud platform",
+            },
           },
           {
             id: "application-security",
@@ -332,10 +407,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Configure appropriate access and protection for applications.",
             icon: ShieldCheck,
+            image: {
+              src: "/images/services/cloud-aws/aws/includes/aws-application-security.png",
+              alt: "A protective shield with a checkmark securing application workloads connected to a cloud gateway",
+            },
           },
         ],
         icon: CloudCog,
         approved: true,
+        image: {
+          src: "/images/services/cloud-aws/aws/aws-hero.png",
+          alt: "A laptop, server racks and a NAS enclosure connected to a cloud platform",
+        },
       },
     ],
   },
@@ -351,6 +434,10 @@ export const serviceCategories: ServiceCategory[] = [
       "Coordinated protection",
       "Stronger recovery planning",
     ],
+    heroImage: {
+      src: "/images/services/cyber-security/cybersecurity-hero.png",
+      alt: "A shield, magnifying glass and layered security icons connected in a network",
+    },
     navItems: [
       { label: "Cyber Risk Auditing", href: "/services/cyber-risk-auditing" },
       {
@@ -365,34 +452,6 @@ export const serviceCategories: ServiceCategory[] = [
         label: "Cyber Risk Management",
         href: "/services/cyber-risk-management",
       },
-      {
-        label: "Cloud Security",
-        href: "/services/cyber-security-architecture#cloud-security",
-      },
-      {
-        label: "Application Security",
-        href: "/services/cyber-security-architecture#application-security",
-      },
-      {
-        label: "Network Monitoring",
-        href: "/services/cyber-security-architecture#network-monitoring",
-      },
-      {
-        label: "Identity Security",
-        href: "/services/cyber-security-architecture#identity-security",
-      },
-      {
-        label: "Data Security",
-        href: "/services/data-management-security#data-security",
-      },
-      {
-        label: "Zero Trust",
-        href: "/services/cyber-security-architecture#zero-trust",
-      },
-      {
-        label: "Email & Workspace Security",
-        href: "/services/cyber-security-architecture#workspace-security",
-      },
     ],
     pages: [
       {
@@ -404,6 +463,7 @@ export const serviceCategories: ServiceCategory[] = [
           "Security audits, vulnerability assessments and authorised penetration testing that expose weaknesses before they affect your business.",
         intro: [
           "Identify weaknesses before they affect your business through security audits, vulnerability assessments and authorised penetration testing. Our findings help you prioritise remediation across systems, networks and processes.",
+          "We begin by reviewing your current configurations and controls, then run vulnerability assessments to identify and prioritise the issues that matter most. Where appropriate, authorised penetration testing is carried out strictly within an agreed scope to confirm how those weaknesses could be exploited in practice.",
         ],
         scope: [
           {
@@ -411,22 +471,38 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Security Audits",
             description: "Review configurations and controls.",
             icon: ClipboardCheck,
+            image: {
+              src: "/images/services/cyber-security/cyber-risk-auditing-service/includes/security-audits.png",
+              alt: "An audit checklist beside a laptop showing configuration controls and a protected, connected server",
+            },
           },
           {
             id: "vulnerabilities",
             title: "Vulnerability Assessments",
             description: "Identify and prioritise weaknesses.",
             icon: AlertTriangle,
+            image: {
+              src: "/images/services/cyber-security/cyber-risk-auditing-service/includes/vulnerability-assessments.png",
+              alt: "A laptop showing a prioritised issues list beside a magnifying glass highlighting a flagged application",
+            },
           },
           {
             id: "penetration-testing",
             title: "Penetration Testing",
             description: "Test only within explicitly authorised scope.",
             icon: Target,
+            image: {
+              src: "/images/services/cyber-security/cyber-risk-auditing-service/includes/penetration-testing.png",
+              alt: "An attack-path diagram beside a contained server and a target marked with an authorised checkmark",
+            },
           },
         ],
         icon: SearchCheck,
         approved: true,
+        image: {
+          src: "/images/services/cyber-security/cyber-risk-auditing-service/cyber-risk-auditing-hero.png",
+          alt: "A magnifying glass examining a network and device diagram beside an audit checklist",
+        },
       },
       {
         slug: "cyber-security-architecture",
@@ -445,12 +521,20 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Design and configure appropriate perimeter and internal controls.",
             icon: ShieldCheck,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/network-security-and-firewalls.png",
+              alt: "A firewall appliance protecting server infrastructure behind a honeycomb perimeter wall",
+            },
           },
           {
             id: "endpoint",
             title: "Endpoint Protection",
             description: "Protect business devices.",
             icon: MonitorSmartphone,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/endpoint-protection.png",
+              alt: "A laptop, monitor and phone each individually protected inside a shielded enclosure",
+            },
           },
           {
             id: "ids-ips",
@@ -458,30 +542,50 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Add detection and prevention controls where appropriate.",
             icon: Radar,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/ids-and-ips.png",
+              alt: "A radar detecting an incoming threat, blocked by a firewall gate between servers",
+            },
           },
           {
             id: "cloud-security",
             title: "Cloud Security",
             description: "Protect cloud access and workloads.",
             icon: Cloud,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/cloud-security.png",
+              alt: "A cloud platform with a shield connected to protected server workloads",
+            },
           },
           {
             id: "application-security",
             title: "Application Security",
             description: "Review application protections.",
             icon: FileCheck,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/application-security.png",
+              alt: "Four connected application modules, each individually verified with a checkmark",
+            },
           },
           {
             id: "network-monitoring",
             title: "Network Monitoring",
             description: "Improve visibility of network events.",
             icon: Eye,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/network-monitoring.png",
+              alt: "A laptop showing a network topology map beside live traffic charts and a network switch",
+            },
           },
           {
             id: "identity-security",
             title: "Identity Security",
             description: "Define access and authentication controls.",
             icon: Fingerprint,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/identity-security.png",
+              alt: "A fingerprint authentication panel beside a security key and access badge",
+            },
           },
           {
             id: "zero-trust",
@@ -489,6 +593,10 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Apply least-privilege access and verification principles.",
             icon: KeyRound,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/zero-trust.png",
+              alt: "A verified workload enclosed within a protective barrier beside a shield",
+            },
           },
           {
             id: "workspace-security",
@@ -496,10 +604,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Protect business communications and user environments.",
             icon: MailWarning,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-architecture/includes/email-and-workspace-security.png",
+              alt: "A shielded email icon connecting a laptop and phone to the cloud",
+            },
           },
         ],
         icon: Layers,
         approved: true,
+        image: {
+          src: "/images/services/cyber-security/cyber-security-architecture/cyber-security-architecture-hero.png",
+          alt: "Devices, servers and identity security connected and protected within a layered security architecture",
+        },
       },
       {
         slug: "cyber-security-consultancy",
@@ -517,12 +633,20 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Security Policies",
             description: "Define responsibilities and controls.",
             icon: ClipboardList,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-consultancy/includes/security-policies.png",
+              alt: "A policy checklist and shield connected to roles, settings and control layers",
+            },
           },
           {
             id: "incident-planning",
             title: "Incident Response Planning",
             description: "Prepare escalation and recovery procedures.",
             icon: Siren,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-consultancy/includes/incident-response-planning.png",
+              alt: "An alarm beacon connected to an escalation flowchart and a recovery arrow restoring server data",
+            },
           },
           {
             id: "compliance",
@@ -530,10 +654,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Assess applicable obligations and improvement priorities.",
             icon: FileCheck,
+            image: {
+              src: "/images/services/cyber-security/cyber-security-consultancy/includes/compliance-planning.png",
+              alt: "A verified compliance document beside folders and a laptop showing progress dashboards",
+            },
           },
         ],
         icon: ShieldCheck,
         approved: true,
+        image: {
+          src: "/images/services/cyber-security/cyber-security-consultancy/cyber-security-consultancy-hero.png",
+          alt: "A shield-protected server connected to a policy dashboard, checklist and alarm beacon",
+        },
       },
       {
         slug: "cyber-risk-management",
@@ -567,6 +699,10 @@ export const serviceCategories: ServiceCategory[] = [
         ],
         icon: ShieldAlert,
         approved: true,
+        image: {
+          src: "/images/services/cyber-security/cyber-risk-management.png",
+          alt: "A laptop showing a risk heat map beside a shield protecting data assets and a risk-treatment process flow",
+        },
       },
     ],
   },
@@ -582,6 +718,10 @@ export const serviceCategories: ServiceCategory[] = [
       "Usable business insight",
       "Connected digital experiences",
     ],
+    heroImage: {
+      src: "/images/services/AI-data-business Applications/ai-data-applications-hero.png",
+      alt: "A connected AI brain, analytics dashboard and database overlooking a mountain lake at dusk",
+    },
     navItems: [
       { label: "AI Development", href: "/services/ai-development" },
       { label: "Big Data & Analytics", href: "/services/big-data-analytics" },
@@ -608,12 +748,20 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Predictive Analytics",
             description: "Explore patterns and forecasting use cases.",
             icon: LineChart,
+            image: {
+              src: "/images/services/AI-data-business Applications/ai-development/includes/predictive-analytics.png",
+              alt: "A trend line extending from historical data points into a forecast projection",
+            },
           },
           {
             id: "vision",
             title: "Computer Vision",
             description: "Apply visual analysis to suitable workflows.",
             icon: Scan,
+            image: {
+              src: "/images/services/AI-data-business Applications/ai-development/includes/computer-vision.png",
+              alt: "A machine vision camera detecting and classifying objects with bounding boxes",
+            },
           },
           {
             id: "nlp",
@@ -621,28 +769,48 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Analyse text and support conversational interfaces.",
             icon: MessageSquare,
+            image: {
+              src: "/images/services/AI-data-business Applications/ai-development/includes/natural-language-processing.png",
+              alt: "Chat bubbles and a sound wave connected to an AI processor beside a laptop showing text",
+            },
           },
           {
             id: "automation",
             title: "RPA and Intelligent Automation",
             description: "Reduce repetitive tasks.",
             icon: Bot,
+            image: {
+              src: "/images/services/AI-data-business Applications/ai-development/includes/rpa-and-intelligent-automation.png",
+              alt: "A robotic arm stacking items beside a laptop showing a process flowchart",
+            },
           },
           {
             id: "ai-security",
             title: "AI in Cybersecurity",
             description: "Apply suitable analysis to security workflows.",
             icon: ShieldCheck,
+            image: {
+              src: "/images/services/AI-data-business Applications/ai-development/includes/ai-in-cybersecurity.png",
+              alt: "An AI brain on a processor chip beside a shield, radar globe and protected servers",
+            },
           },
           {
             id: "recommendations",
             title: "Recommendation Systems",
             description: "Support relevant personalised suggestions.",
             icon: Sparkles,
+            image: {
+              src: "/images/services/AI-data-business Applications/ai-development/includes/recommendation-systems.png",
+              alt: "A user profile connected to personalised product suggestions on a phone",
+            },
           },
         ],
         icon: BrainCircuit,
         approved: true,
+        image: {
+          src: "/images/services/AI-data-business Applications/ai-development/ai-development-hero.png",
+          alt: "A connected brain on a processor chip linked to a laptop, chat bubble and vision icon",
+        },
       },
       {
         slug: "big-data-analytics",
@@ -694,6 +862,10 @@ export const serviceCategories: ServiceCategory[] = [
         ],
         icon: BarChart3,
         approved: true,
+        image: {
+          src: "/images/services/AI-data-business Applications/big-data-analytics.png",
+          alt: "Database cylinders flowing into analytics charts beside a laptop showing a dashboard",
+        },
       },
       {
         slug: "data-management-security",
@@ -711,28 +883,48 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Database Implementation",
             description: "Establish suitable data structures.",
             icon: Database,
+            image: {
+              src: "/images/services/AI-data-business Applications/data-management-cyber-security-services/includes/database-implementation.png",
+              alt: "Three databases connected to a laptop showing a data-structure diagram",
+            },
           },
           {
             id: "backup",
             title: "Backup and Recovery",
             description: "Define protection and restoration plans.",
             icon: HardDrive,
+            image: {
+              src: "/images/services/AI-data-business Applications/data-management-cyber-security-services/includes/backup-and-recovery.png",
+              alt: "Circular backup and restore arrows connecting a storage array, database and backup device",
+            },
           },
           {
             id: "access",
             title: "Access Control",
             description: "Limit data access by role.",
             icon: KeyRound,
+            image: {
+              src: "/images/services/AI-data-business Applications/data-management-cyber-security-services/includes/access-control.png",
+              alt: "A key unlocking a gate connected to three distinct user roles",
+            },
           },
           {
             id: "data-security",
             title: "Data Security",
             description: "Apply encryption and appropriate handling controls.",
             icon: Lock,
+            image: {
+              src: "/images/services/AI-data-business Applications/data-management-cyber-security-services/includes/data-security.png",
+              alt: "A shield protecting a locked database",
+            },
           },
         ],
         icon: Database,
         approved: true,
+        image: {
+          src: "/images/services/AI-data-business Applications/data-management-cyber-security-services/data-management-security-hero.png",
+          alt: "A database, padlock, shield and storage server connected on a secure data platform",
+        },
       },
       {
         slug: "mobility-solutions",
@@ -750,22 +942,38 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Mobile Device Management",
             description: "Coordinate enrolled business devices.",
             icon: Tablet,
+            image: {
+              src: "/images/services/AI-data-business Applications/mobility-solution/includes/mobile-device-management.png",
+              alt: "A central management console connected to multiple enrolled phones, a laptop and a tablet",
+            },
           },
           {
             id: "access",
             title: "Secure Mobile Access",
             description: "Apply controlled access to business resources.",
             icon: Lock,
+            image: {
+              src: "/images/services/AI-data-business Applications/mobility-solution/includes/secure-mobile-access.png",
+              alt: "A phone with a padlock and shield connecting through a secure gateway to a server",
+            },
           },
           {
             id: "workforce",
             title: "Workforce Mobility",
             description: "Connect remote and mobile workflows.",
             icon: Users2,
+            image: {
+              src: "/images/services/AI-data-business Applications/mobility-solution/includes/workforce-mobility.png",
+              alt: "A laptop, phone and tablet connected through the cloud to multiple workforce users",
+            },
           },
         ],
         icon: Smartphone,
         approved: true,
+        image: {
+          src: "/images/services/AI-data-business Applications/mobility-solution/mobility-solutions-hero.png",
+          alt: "A phone, tablet and laptop connected through the cloud to remote team members",
+        },
       },
       {
         slug: "website-development",
