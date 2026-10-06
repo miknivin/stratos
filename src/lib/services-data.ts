@@ -1154,18 +1154,14 @@ export const serviceCategories: ServiceCategory[] = [
       "Effective shared spaces",
       "Coordinated room technology",
     ],
+    heroImage: {
+      src: "/images/services/av-collaboration/av-collaboration-hero.png",
+      alt: "A video conferencing display with speakers, a camera bar, a conferencing puck and a touch panel",
+    },
     navItems: [
       {
         label: "Audio Visual Solutions",
         href: "/services/audio-visual-solutions",
-      },
-      {
-        label: "Corporate AV",
-        href: "/services/audio-visual-solutions#corporate-av",
-      },
-      {
-        label: "Education AV",
-        href: "/services/audio-visual-solutions#education-av",
       },
     ],
     pages: [
@@ -1186,6 +1182,10 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Plan smart displays and meeting-room collaboration systems.",
             icon: MonitorPlay,
+            image: {
+              src: "/images/services/audio-visual-solutions/includes/corporate-av.png",
+              alt: "A meeting-room display showing a video call, with a camera bar, conferencing puck and touch panel",
+            },
           },
           {
             id: "education-av",
@@ -1193,6 +1193,10 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Provide display and presentation technology for educational spaces. This is equipment integration, not training programmes.",
             icon: Projector,
+            image: {
+              src: "/images/services/audio-visual-solutions/includes/education-av.png",
+              alt: "An interactive display showing educational content, with a stylus pen and a projector",
+            },
           },
           {
             id: "integration",
@@ -1200,16 +1204,28 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Connect AV systems with existing IT and room requirements.",
             icon: Link2,
+            image: {
+              src: "/images/services/audio-visual-solutions/includes/installation-and-integration.png",
+              alt: "An AV rack wired to a display and camera bar",
+            },
           },
           {
             id: "support",
             title: "AV Support",
             description: "Arrange maintenance under the agreed scope.",
             icon: LifeBuoy,
+            image: {
+              src: "/images/services/audio-visual-solutions/includes/av-support.png",
+              alt: "A projector beside a wrench, screwdriver and a tablet showing a verified checkmark",
+            },
           },
         ],
         icon: MonitorPlay,
         approved: true,
+        image: {
+          src: "/images/services/av-collaboration/audio-visual-solutions.png",
+          alt: "A large display, speakers, a camera bar, a conferencing puck and a touch panel on a meeting room table",
+        },
       },
     ],
   },
@@ -1225,6 +1241,10 @@ export const serviceCategories: ServiceCategory[] = [
       "Controlled access",
       "Easier premises management",
     ],
+    heroImage: {
+      src: "/images/services/smart-security/smart-security-hero.png",
+      alt: "A smart building connected to a CCTV camera, fingerprint access panel and parking barrier",
+    },
     navItems: [
       { label: "CCTV Surveillance", href: "/services/cctv-surveillance" },
       { label: "Parking Management", href: "/services/parking-management" },
@@ -1254,22 +1274,38 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Camera Planning",
             description: "Assess coverage requirements.",
             icon: Camera,
+            image: {
+              src: "/images/services/smart-security/cctv-surveillance/includes/camera-planning.png",
+              alt: "Cameras mapping coverage across a floor plan of an office",
+            },
           },
           {
             id: "monitoring",
             title: "Recording and Monitoring",
             description: "Select recording and viewing arrangements.",
             icon: Video,
+            image: {
+              src: "/images/services/smart-security/cctv-surveillance/includes/recording-and-monitoring.png",
+              alt: "An NVR with a multi-view monitoring display connected to a dome camera",
+            },
           },
           {
             id: "support",
             title: "Integration and Maintenance",
             description: "Coordinate agreed integration and service needs.",
             icon: Wrench,
+            image: {
+              src: "/images/services/smart-security/cctv-surveillance/includes/integration-and-maintenance.png",
+              alt: "A dome camera, network cables and an NVR beside maintenance tools and a verified checkmark",
+            },
           },
         ],
         icon: Cctv,
         approved: true,
+        image: {
+          src: "/images/services/smart-security/cctv-surveillance/cctv-surveillance-hero.png",
+          alt: "A bullet camera and dome camera connected to an NVR and a multi-camera monitoring display",
+        },
       },
       {
         slug: "parking-management",
@@ -1287,22 +1323,38 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Entry and Exit Control",
             description: "Manage authorised vehicle movement.",
             icon: ParkingCircle,
+            image: {
+              src: "/images/services/smart-security/parking-management/includes/entry-and-exit-control.png",
+              alt: "A car between two entry and exit barriers fitted with cameras",
+            },
           },
           {
             id: "operations",
             title: "Parking Operations",
             description: "Define the required management workflow.",
             icon: SlidersHorizontal,
+            image: {
+              src: "/images/services/smart-security/parking-management/includes/parking-operations.png",
+              alt: "A parking lot with occupancy sensors and a bay-availability display",
+            },
           },
           {
             id: "integration",
             title: "System Integration",
             description: "Connect suitable controls and monitoring systems.",
             icon: Link2,
+            image: {
+              src: "/images/services/smart-security/parking-management/includes/system-integration.png",
+              alt: "A barrier, camera, control panel and controller unit connected together",
+            },
           },
         ],
         icon: SquareParking,
         approved: true,
+        image: {
+          src: "/images/services/smart-security/parking-management/parking-management-hero.png",
+          alt: "A car at a parking barrier with cameras, beside marked parking spaces and a control panel",
+        },
       },
       {
         slug: "access-control-intercom",
@@ -1320,12 +1372,20 @@ export const serviceCategories: ServiceCategory[] = [
             title: "Access Control",
             description: "Define credentials and access permissions.",
             icon: KeyRound,
+            image: {
+              src: "/images/services/smart-security/access-control-intercom/includes/access-control.png",
+              alt: "A fingerprint access panel and keycard beside a glass entrance door",
+            },
           },
           {
             id: "intercom",
             title: "Intercom Systems",
             description: "Support visitor communication.",
             icon: PhoneCall,
+            image: {
+              src: "/images/services/smart-security/access-control-intercom/includes/intercom-systems.png",
+              alt: "A video intercom unit beside an indoor monitor showing the entrance",
+            },
           },
           {
             id: "integration",
@@ -1333,10 +1393,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Connect access and communication systems where appropriate.",
             icon: Link2,
+            image: {
+              src: "/images/services/smart-security/access-control-intercom/includes/integration.png",
+              alt: "An intercom, control hub, fingerprint reader and door handle connected together",
+            },
           },
         ],
         icon: KeyRound,
         approved: true,
+        image: {
+          src: "/images/services/smart-security/access-control-intercom/access-control-intercom-hero.png",
+          alt: "A video intercom and fingerprint access panel beside a keycard and an indoor display at a glass entrance",
+        },
       },
       {
         slug: "smart-building-systems",
@@ -1354,22 +1422,38 @@ export const serviceCategories: ServiceCategory[] = [
             title: "IoT Devices and Sensors",
             description: "Source and integrate suitable connected components.",
             icon: Antenna,
+            image: {
+              src: "/images/services/smart-security/smart-building-systems/includes/iot-devices-and-sensors.png",
+              alt: "A connected hub, temperature sensor, motion sensor and air-quality sensor",
+            },
           },
           {
             id: "automation",
             title: "Lighting and HVAC Automation",
             description: "Coordinate agreed control functions.",
             icon: Lightbulb,
+            image: {
+              src: "/images/services/smart-security/smart-building-systems/includes/lighting-and-hvac-automation.png",
+              alt: "A lit interior room with HVAC ductwork and a smart thermostat control",
+            },
           },
           {
             id: "access",
             title: "Smart Access",
             description: "Connect relevant building access technology.",
             icon: DoorOpen,
+            image: {
+              src: "/images/services/smart-security/smart-building-systems/includes/smart-access.png",
+              alt: "An RFID reader, keycard and smart door handle at a building entrance",
+            },
           },
         ],
         icon: Building2,
         approved: true,
+        image: {
+          src: "/images/services/smart-security/smart-building-systems/smart-building-systems-hero.png",
+          alt: "A smart building connected to lighting, HVAC ductwork and a motion sensor",
+        },
       },
     ],
   },
