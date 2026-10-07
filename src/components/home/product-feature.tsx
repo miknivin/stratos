@@ -1,4 +1,4 @@
-import { ArrowRight, Package } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/section-heading";
@@ -36,7 +36,7 @@ export function ProductFeature() {
                 className="flex items-start gap-3 rounded-2xl border border-ink-900/8 bg-mist-50 p-5"
               >
                 <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy-900 text-white">
-                  <Package className="h-4 w-4" strokeWidth={1.75} />
+                  <category.icon className="h-4 w-4" strokeWidth={1.75} />
                 </span>
                 <p className="text-sm font-medium text-ink-900">
                   {category.title}

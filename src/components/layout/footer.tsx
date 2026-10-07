@@ -17,8 +17,12 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/8 bg-navy-950">
-      <Container className="py-16">
+    <footer className="relative overflow-hidden border-t border-white/8 bg-navy-950">
+      <div
+        className="animate-float-a absolute -top-32 right-[-6%] h-96 w-96 rounded-full bg-brand-600/20 blur-[110px]"
+        aria-hidden
+      />
+      <Container className="relative py-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr_1.1fr]">
           <div className="flex flex-col gap-4">
             <Image

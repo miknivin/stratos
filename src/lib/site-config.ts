@@ -1,3 +1,12 @@
+import {
+  CircuitBoard,
+  Siren,
+  Telescope,
+  Radio,
+  Lock,
+  type LucideIcon,
+} from "lucide-react";
+
 export const siteConfig = {
   name: "Stratos Info Tech",
   legalName: "Stratos Info Tech",
@@ -22,46 +31,81 @@ export const siteConfig = {
   },
 } as const;
 
-/** Simple top-level links shown alongside the Services/Products menus. */
+/** Simple top-level links shown alongside the Services mega menu. */
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Products", href: "/products" },
   { label: "Brands", href: "/brands" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
-export const productCategories = [
+export type ProductCategory = {
+  slug: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  /** Real designer artwork, once delivered — falls back to the placeholder scene when absent. */
+  image?: { src: string; alt: string };
+};
+
+export const productCategories: ProductCategory[] = [
   {
     slug: "spare-parts-equipment",
     title: "Spare Parts & Equipment",
     description:
       "Source electronic and mechanical components and specialist machinery parts for maintenance and upgrades. Product examples include routers, switches, circuit boards and sensors.",
+    icon: CircuitBoard,
+    image: {
+      src: "/images/products/spare-parts-equipment.png",
+      alt: "A circuit board, router, network switch and mechanical bearings and gears",
+    },
   },
   {
     slug: "alarm-monitoring",
     title: "Alarm & Monitoring Devices",
     description:
       "Explore alarm sensors, surveillance cameras, monitors and control panels for site and system monitoring requirements.",
+    icon: Siren,
+    image: {
+      src: "/images/products/alarm-monitoring-devices.png",
+      alt: "A dome camera, motion sensor, control panel and alarm beacon",
+    },
   },
   {
     slug: "astronomical-instruments",
     title: "Astronomical Instruments & Accessories",
     description:
       "Source telescopes, mounts, optics and related accessories for research, educational and specialist applications.",
+    icon: Telescope,
+    image: {
+      src: "/images/products/astronomical-instruments-accessories.png",
+      alt: "A telescope on a mount beside eyepieces, lenses and a carrying case",
+    },
   },
   {
     slug: "smart-systems",
     title: "Smart Systems",
     description:
       "Explore IoT devices, sensors and controllers for integrated building functions such as lighting, HVAC and access control.",
+    icon: Radio,
+    image: {
+      src: "/images/products/smart-systems.png",
+      alt: "A smart hub, IoT sensors, a smart dial controller and a wall panel",
+    },
   },
   {
     slug: "encryption-equipment",
     title: "Encryption Equipment",
     description:
       "Discuss encryption devices, secure routers and cryptographic modules for data protection and secure communications.",
+    icon: Lock,
+    image: {
+      src: "/images/products/encryption-equipment.png",
+      alt: "A secure network switch, an encryption module and a padlock",
+    },
   },
-] as const;
+];
 
 /** "Our values" — used on the About page. */
 export const values = [

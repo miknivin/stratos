@@ -1469,6 +1469,10 @@ export const serviceCategories: ServiceCategory[] = [
       "Organised maintenance",
       "Predictable support scope",
     ],
+    heroImage: {
+      src: "/images/services/consulting-managed-it/it-consultancy/it-consultancy-hero.png",
+      alt: "A compass and network diagram beside a laptop and a server rack",
+    },
     navItems: [
       { label: "IT Consultancy", href: "/services/it-consultancy" },
       {
@@ -1476,10 +1480,6 @@ export const serviceCategories: ServiceCategory[] = [
         href: "/services/operation-maintenance",
       },
       { label: "Managed IT Support", href: "/services/managed-it-support" },
-      {
-        label: "Asset Lifecycle Management",
-        href: "/services/operation-maintenance#asset-lifecycle",
-      },
     ],
     pages: [
       {
@@ -1498,28 +1498,48 @@ export const serviceCategories: ServiceCategory[] = [
             title: "IT Strategy",
             description: "Define business-aligned priorities.",
             icon: Target,
+            image: {
+              src: "/images/services/consulting-managed-it/it-consultancy/includes/it-strategy.png",
+              alt: "A compass and a target on priority steps beside a laptop",
+            },
           },
           {
             id: "infrastructure",
             title: "Infrastructure Planning",
             description: "Assess capacity and architecture.",
             icon: Server,
+            image: {
+              src: "/images/services/consulting-managed-it/it-consultancy/includes/infrastructure-planning.png",
+              alt: "Server racks and a network switch beside a data-centre floor plan",
+            },
           },
           {
             id: "integration",
             title: "System Integration",
             description: "Coordinate connected tools.",
             icon: Link2,
+            image: {
+              src: "/images/services/consulting-managed-it/it-consultancy/includes/system-integration.png",
+              alt: "A central hub connecting a laptop, switch, server and tablet",
+            },
           },
           {
             id: "transformation",
             title: "Digital Transformation",
             description: "Plan phased technology improvements.",
             icon: RefreshCw,
+            image: {
+              src: "/images/services/consulting-managed-it/it-consultancy/includes/digital-transformation.png",
+              alt: "A progression from paper documents to digitised layers, a laptop and a cloud",
+            },
           },
         ],
         icon: Compass,
         approved: true,
+        image: {
+          src: "/images/services/consulting-managed-it/it-consultancy/it-consultancy-hero.png",
+          alt: "A compass and network diagram beside a laptop and a server rack",
+        },
       },
       {
         slug: "operation-maintenance",
@@ -1537,24 +1557,40 @@ export const serviceCategories: ServiceCategory[] = [
             title: "System Updates",
             description: "Coordinate patches and firmware changes.",
             icon: RefreshCw,
+            image: {
+              src: "/images/services/consulting-managed-it/operation-maintenance/includes/system-updates.png",
+              alt: "A refresh icon with update packages flowing between a laptop and a server",
+            },
           },
           {
             id: "monitoring",
             title: "Proactive Monitoring",
             description: "Review service health under the agreed coverage.",
             icon: Activity,
+            image: {
+              src: "/images/services/consulting-managed-it/operation-maintenance/includes/proactive-monitoring.png",
+              alt: "A monitor showing a live health graph connected to two servers",
+            },
           },
           {
             id: "optimisation",
             title: "Performance Optimisation",
             description: "Address relevant bottlenecks.",
             icon: Gauge,
+            image: {
+              src: "/images/services/consulting-managed-it/operation-maintenance/includes/performance-optimisation.png",
+              alt: "A speed gauge above a server with motion streaks",
+            },
           },
           {
             id: "repairs",
             title: "Troubleshooting and Repairs",
             description: "Resolve supported technical issues.",
             icon: Wrench,
+            image: {
+              src: "/images/services/consulting-managed-it/operation-maintenance/includes/troubleshooting-and-repairs.png",
+              alt: "An open PC chassis beside repair tools and a diagnostics tablet",
+            },
           },
           {
             id: "asset-lifecycle",
@@ -1562,10 +1598,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Plan procurement, maintenance, refresh and appropriate disposal.",
             icon: Recycle,
+            image: {
+              src: "/images/services/consulting-managed-it/operation-maintenance/includes/asset-lifecycle-management.png",
+              alt: "A circular lifecycle of a boxed laptop, an in-use laptop and server, and disassembled components",
+            },
           },
         ],
         icon: Wrench,
         approved: true,
+        image: {
+          src: "/images/services/consulting-managed-it/operation-maintenance/operation-maintenance-hero.png",
+          alt: "An open server rack, network switch, a health-monitoring tablet and maintenance tools",
+        },
       },
       {
         slug: "managed-it-support",
@@ -1583,12 +1627,20 @@ export const serviceCategories: ServiceCategory[] = [
             title: "User Support",
             description: "Assist with supported workplace issues.",
             icon: Headset,
+            image: {
+              src: "/images/services/consulting-managed-it/managed-it-support/includes/user-support.png",
+              alt: "A support headset beside a laptop and a mouse",
+            },
           },
           {
             id: "infrastructure",
             title: "Infrastructure Support",
             description: "Coordinate supported systems and networks.",
             icon: Server,
+            image: {
+              src: "/images/services/consulting-managed-it/managed-it-support/includes/infrastructure-support.png",
+              alt: "Servers connected to a network switch and a monitoring tablet",
+            },
           },
           {
             id: "support-plan",
@@ -1596,10 +1648,18 @@ export const serviceCategories: ServiceCategory[] = [
             description:
               "Define coverage, priorities and escalation. Hours and response commitments are confirmed with each client.",
             icon: ClipboardList,
+            image: {
+              src: "/images/services/consulting-managed-it/managed-it-support/includes/support-planning.png",
+              alt: "A clock beside an escalation checklist and a tablet",
+            },
           },
         ],
         icon: Headset,
         approved: true,
+        image: {
+          src: "/images/services/consulting-managed-it/managed-it-support/managed-it-support-hero.png",
+          alt: "A support headset, laptop, server and checklist panel connected together",
+        },
       },
     ],
   },

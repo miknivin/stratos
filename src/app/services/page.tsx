@@ -27,8 +27,12 @@ export default function ServicesPage() {
         primaryHref="/contact"
       />
 
-      <section className="bg-mist-50 py-24 sm:py-28">
-        <Container>
+      <section className="relative overflow-hidden bg-mist-50 py-24 sm:py-28">
+        <div
+          className="animate-float-a absolute -top-20 left-[-8%] h-96 w-96 rounded-full bg-brand-500/18 blur-[110px]"
+          aria-hidden
+        />
+        <Container className="relative">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {serviceCategories.map((category, index) => (
               <Reveal key={category.slug} delay={(index % 3) * 80}>

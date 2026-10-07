@@ -155,8 +155,12 @@ function CategoryOverview({ category }: { category: ServiceCategory }) {
         </Container>
       </section>
 
-      <section className="bg-mist-50 py-24 sm:py-28">
-        <Container>
+      <section className="relative overflow-hidden bg-mist-50 py-24 sm:py-28">
+        <div
+          className="animate-float-b absolute -top-16 right-[-8%] h-80 w-80 rounded-full bg-navy-700/18 blur-[100px]"
+          aria-hidden
+        />
+        <Container className="relative">
           <Eyebrow>Business outcomes</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold text-balance text-ink-900 sm:text-4xl">
             What this means for your business
@@ -258,8 +262,12 @@ function ServiceDetail({ service }: { service: ServicePage }) {
         </section>
       ) : null}
 
-      <section id="scope" className="scroll-mt-24 bg-mist-50 py-24 sm:py-28">
-        <Container>
+      <section id="scope" className="relative scroll-mt-24 overflow-hidden bg-mist-50 py-24 sm:py-28">
+        <div
+          className="animate-float-a absolute -top-16 left-[-8%] h-80 w-80 rounded-full bg-brand-500/18 blur-[100px]"
+          aria-hidden
+        />
+        <Container className="relative">
           <Eyebrow>Service scope</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold text-balance text-ink-900 sm:text-4xl">
             What this service includes

@@ -7,11 +7,11 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { navLinks, productCategories, siteConfig } from "@/lib/site-config";
+import { navLinks, siteConfig } from "@/lib/site-config";
 import { serviceCategories } from "@/lib/services-data";
 import { cn } from "@/lib/cn";
 
-type OpenMenu = "services" | "products" | null;
+type OpenMenu = "services" | null;
 
 export function Header() {
   const pathname = usePathname();
@@ -22,7 +22,6 @@ export function Header() {
   );
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileCategory, setMobileCategory] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -187,60 +186,7 @@ export function Header() {
             ) : null}
           </div>
 
-          {/* Products menu */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() =>
-                setOpenMenu((m) => (m === "products" ? null : "products"))
-              }
-              aria-expanded={openMenu === "products"}
-              aria-controls="products-menu-panel"
-              className={cn(
-                "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900",
-                pathname.startsWith("/products")
-                  ? "text-white"
-                  : "text-white/65 hover:text-white",
-              )}
-            >
-              Products
-              <ChevronDown
-                className={cn(
-                  "h-3.5 w-3.5 transition-transform duration-200",
-                  openMenu === "products" && "rotate-180",
-                )}
-              />
-            </button>
-
-            {openMenu === "products" ? (
-              <div
-                id="products-menu-panel"
-                className="absolute top-full left-1/2 z-50 mt-3 w-72 -translate-x-1/2 overflow-hidden rounded-2xl border border-ink-900/8 bg-white shadow-2xl shadow-ink-900/20"
-              >
-                <ul className="p-2">
-                  {productCategories.map((product) => (
-                    <li key={product.slug}>
-                      <Link
-                        href={`/products#${product.slug}`}
-                        className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-mist-500 transition-colors hover:bg-ink-900/3 hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
-                      >
-                        {product.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <div className="border-t border-ink-900/8 bg-mist-50 px-5 py-3">
-                  <Link
-                    href="/products"
-                    className="rounded text-sm font-semibold text-brand-700 hover:text-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
-                  >
-                    View all products &rarr;
-                  </Link>
-                </div>
-              </div>
-            ) : null}
-          </div>
-
+          <NavLink href="/products" label="Products" pathname={pathname} />
           <NavLink href="/brands" label="Brands" pathname={pathname} />
           <NavLink href="/contact" label="Contact" pathname={pathname} />
         </nav>
@@ -356,49 +302,6 @@ export function Header() {
                     className="mt-1 block rounded-lg px-2 py-2 text-sm font-semibold text-brand-300 hover:text-brand-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900"
                   >
                     View all services &rarr;
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <button
-                type="button"
-                onClick={() => setMobileProductsOpen((v) => !v)}
-                aria-expanded={mobileProductsOpen}
-                aria-controls="mobile-products-panel"
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-base font-medium text-white/70 hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900"
-              >
-                Products
-                <ChevronDown
-                  className={cn(
-                    "h-4 w-4 transition-transform duration-200",
-                    mobileProductsOpen && "rotate-180",
-                  )}
-                />
-              </button>
-              <div
-                id="mobile-products-panel"
-                className={cn(
-                  "grid overflow-hidden transition-[grid-template-rows] duration-300",
-                  mobileProductsOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
-                )}
-              >
-                <div className="min-h-0 pl-3">
-                  {productCategories.map((product) => (
-                    <Link
-                      key={product.slug}
-                      href={`/products#${product.slug}`}
-                      className="block rounded-lg px-2 py-1.5 text-sm text-white/70 hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900"
-                    >
-                      {product.title}
-                    </Link>
-                  ))}
-                  <Link
-                    href="/products"
-                    className="mt-1 block rounded-lg px-2 py-2 text-sm font-semibold text-brand-300 hover:text-brand-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900"
-                  >
-                    View all products &rarr;
                   </Link>
                 </div>
               </div>
