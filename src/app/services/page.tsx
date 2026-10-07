@@ -23,6 +23,10 @@ export default function ServicesPage() {
         title="Complete IT Solutions for Your Business"
         description="From the infrastructure your business depends on to the cloud platforms, applications and smart systems that move it forward, STRATOS brings your technology requirements together. Explore solutions designed around your operations, priorities and growth."
         icons={serviceCategories.map((category) => category.icon)}
+        image={{
+          src: "/images/services/services-hub-hero.png",
+          alt: "A cloud, server racks, network switches, a security shield and a network globe outside a smart building",
+        }}
         primaryLabel="Find the Right Solution"
         primaryHref="/contact"
       />
@@ -33,12 +37,13 @@ export default function ServicesPage() {
           aria-hidden
         />
         <Container className="relative">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className={cardGridClassName(serviceCategories.length)}>
             {serviceCategories.map((category, index) => (
               <Reveal key={category.slug} delay={(index % 3) * 80}>
                 <IllustratedCard
                   href={`/services/${category.slug}`}
                   icon={category.icon}
+                  image={category.heroImage}
                   title={category.name}
                   description={category.intro}
                   linkLabel="Explore category"
